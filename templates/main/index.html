@@ -1,4 +1,443 @@
-<p style="word-spacing: 80px;">caseID OppositionID<p>
-{% for i in column1 %}
-    <p style="word-spacing: 30px;">{{i.0}} {{i.1}}</p>
-{%endfor%}
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Suitor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script defer src="{% static 'js/fontawesome/all.min.js' %}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a href="index.html">
+                <img src="{% static 'images/untitled.svg' %}" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="s-header__content">
+
+            <nav class="s-header__nav-wrap">
+                <ul class="s-header__nav">
+                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="Contact">Contact Us</a></li>
+                </ul>
+            </nav> <!-- end s-header__nav-wrap -->
+
+            <a href="{% url 'login' %}" class="btn btn--primary btn--small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
+                Sign In
+            </a>
+
+        </div> <!-- end header-content -->
+
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg">
+            <div class="gradient-overlay"></div>
+        </div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <h1>Hello.</h1>
+                <div class="s-hero__content-about">
+
+                    <p>
+                    We are Suitor. A full<br>
+                    service law firm, for <br>
+                    those who need legal help.
+                    </p>
+
+                    <footer>
+                        <div class="s-hero__content-social">
+                            <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="s-hero__video">
+            <a class="s-hero__video-link" href="https://player.vimeo.com/video/117310401?color=01aef0&amp;title=0&amp;byline=0&amp;portrait=0" data-lity="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+                <span class="s-hero__video-text">Play Video</span>
+            </a>
+        </div>
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                Scroll Down
+            </a>
+        </div>
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about">
+
+        <div class="horizontal-line"></div>
+
+        <div class="row">
+            <div class="column large-12">
+
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6">Who We Are</h3>
+                </div>
+
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__intro-text">
+                <h1 class="display-1" data-aos="fade-up">
+                  Suitor is a full service Indian law firm offering transactional, regulatory, advisory, dispute resolution and tax services.
+         </h1>
+
+                <p class="lead" data-aos="fade-up">
+                  The firm advises a diverse clientele including domestic and international companies, banks and financial institutions, funds, promoter groups, public sector undertakings, and even the common people who are in need of legal help.
+
+                </p>
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__photo-block">
+                <div class="s-about__photo" data-aos="fade-up"></div>
+            </div>
+        </div>
+
+        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Find the best lawyer for you!</h3>
+                <p>
+                Let us know your case requirements and our system will find the best lawyer for you. Just type in your credentials and find a lawyer within minutes.</p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Consultancy</h3>
+                <p>
+                Looking for consultation regarding any legal matter? We are here for you. Get guidance from the best lawyers.  </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Build</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Launch</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+        </div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services">
+
+        <div class="row">
+            <div class="column large-12">
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6">Our Practices</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                    Alot of law firms out there. But what makes us unique?
+                </h1>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <p class="lead" data-aos="fade-up">
+                  <ul>
+                    <li>High Degree of Partner Involvement and Availability</li>
+                    <li>High Quality Legal Advice </li>
+                    <li>Availability and Responsiveness</li>
+                    <li>Legal Research and Analysis Based Advisory</li>
+                  </ul>
+
+  </p>
+            </div>
+        </div>
+
+        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--product-design"></span>
+                <h3 class="item-title">Banking and Finance</h3>
+                <p>
+                  Banking and finance is one of Suitors’s core and highly recognised areas of expertise. Our full suite of services range from project finance, trade and export finance, working capital, acquisition finance, corporate finance, syndicated lending, structured finance, debt capital markets, securitisation, regulatory advice, and product documentation and standardisation.    </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--branding"></span>
+                <h3 class="item-title">Corporate and Commercial</h3>
+                <p>
+                One of Suitor's key practice areas is corporate and commercial, which extends to various sectors of the economy and wide array of business and transactional matters. The Firm’s experience and expertise in providing advice on corporate and commercial contracts and joint ventures, inbound, operational and structuring matters across a broad range of sectors is well recognised.  </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--frontend"></span>
+                <h3 class="item-title">Dispute Resolution</h3>
+                <p>
+                Suitor works virtually in every area of dispute resolution. Our dispute resolution team regularly advise clients on a variety of contentious matters involving commercial contracts, shareholders’ disputes, enforcement of security, recovery of debts, corporate and securities law, competition law, labour and employment matters, real estate issues and economic offences.  </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--research"></span>
+                <h3 class="item-title">Insurance</h3>
+                <p>
+                  Suitor has a market leading insurance/reinsurance sector practice on both the contentious and non-contentious side.
+
+  On the non-contentious front, we provide assistance with transactional work, including entry strategies, M&A and restructuring, as well as regulatory advisory and development of policy wordings tailormade for the Indian jurisdiction.  </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--illustration"></span>
+                <h3 class="item-title">Energy, Oil and Gas</h3>
+                <p>
+                Suitor has a market-leading practice in the projects and infrastructure space (including in sectors such as power, oil and gas, roads, railways (including metro, MRT, subway), airports, and ports). The lawyers of the Firm have advised a large number of diverse and complex legal issues and matters in this sector.  </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--ecommerce"></span>
+                <h3 class="item-title">Real Estate</h3>
+                <p>
+                  With growth of opportunities and investments in the real estate sector in India, the Firm's lawyers have, over the years, advised on increasingly diverse and complex matters in the real estate sector. In the process, the Firm's lawyers have acquired a thorough understanding of various aspects of the legal and commercial practices pertaining to the real estate sector.
+
+  </p>
+            </div>
+        </div>
+
+    </section> <!-- end s-services -->
+
+    <!-- clients
+    ================================================== -->
+    <div id="clients" class="section s-clients">
+
+
+        <div class="row testimonials collapse">
+
+            <div class="column large-12">
+
+              <h3 class="h6" style = "color: var(--color-1); padding-bottom: 3rem">Articles and Updates</h3>
+
+                <div class="testimonial-slider" data-aos="fade-up">
+
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        The Supreme Court's decision upholding the enforceability of unstamped arbitration agreements is a welcome step towards eliminating technical obstacles for arbitration at the pre-reference stage. However, the issue has been referred to a constitutional bench and given the limited scope of the reference, it is possible that the issue may continue to linger for some time to come.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="{% static 'images/avatars/user-02.jpg' %}" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Issue of unstamped arbitration still in question</strong>
+                                <span>Mar, 2021</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        The Apex Court while upholding the decision of the Madras High Court for the refund of court fees took a purposive interpretation of Section 89 of the Code of Civil Procedure, 1908, held that parties who settle disputes out of court shall fall under the ambit and scope of Section 89 and will be eligible for a refund of court fees paid at the time of filing of the proceedings, under Section 69-A of the Tamil Nadu Court Fees and Suit Valuation Act, 1955.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="{% static 'images/avatars/user-01.jpg' %}" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Supreme Court On Refund Of Court Fees In Out-of-court Settlements</strong>
+                                <span>Mar, 2021</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+
+                </div> <!-- end testimonial slider -->
+
+            </div> <!-- end column -->
+
+        </div> <!-- end row -->
+
+
+    </div> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section class="s-contact" id = "contact">
+
+        <div class="row narrower s-contact__top h-text-center">
+            <div class="column">
+                <h3 class="h6">Get In Touch</h3>
+                <h1 class="display-1">
+                Stuck in a legal problem? Talk to
+                us. We will help you out.
+                Shoot us a message at
+                </h1>
+            </div>
+        </div> <!-- s-footer__top -->
+
+        <div class="row h-text-center">
+            <div class="column">
+                <p class="s-contact__email">
+                    <a href="mailto:#0">suitor@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+    </section>  <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer" >
+        <div class="row row-y-top">
+
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Where to Find Us</h4>
+
+                        <p>
+                        IIIT-Delhi <br>
+                        Semniar Hall No. 202 <br>
+
+                        <a href="tel:197-543-2345">+919911054442</a>
+                        </p>
+                    </div>
+
+                    <div class="column large-5 tab-12 s-footer__block">
+                        <h4 class="h6">Follow Us</h4 class="h6">
+
+                        <ul class="s-footer__list">
+                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column large-4 medium-12 s-footer__block--end">
+                <a href="mailto:#0" class="btn h-full-width" style = "">Let's Discuss</a>
+
+                <div class="ss-copyright">
+                    <span>Copyright Suitor 2021</span>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    top
+                </a>
+            </div> <!-- end ss-go-top -->
+
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

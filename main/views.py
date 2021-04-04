@@ -10,5 +10,8 @@ def index(request):
         data = cursor.fetchall()
         for tu in data:
             context['column1'].append([tu[0],tu[1]])
-        print(data)
     return render(request,'main/index.html',context)
+
+
+def login(request):
+    return render(request,'main/login.html',{})
