@@ -11,13 +11,11 @@ urlpatterns = [
     path('',views.index, name="index"),
     path('login',views.login,name='login'),
     path('loginrequest',views.loginaccess,name='loginrequest'),
-    path('para_query1',views.paralegal, name='para_query1'),
-    path('para_query2',views.paralegal, name='para_query2'),
-    path('para_query3',views.paralegal, name='para_query3'),
-    path('para_query4',views.paralegal, name='para_query4'),
-    path('customer_1',views.customer,name='customer_query1'),
-    path('customer_2',views.customer,name='customer_query2'),
-    path('customer_3',views.customer,name='customer_query3'),
-    path('customer_4',views.customer,name='customer_query4')
+    path('paralegal',views.paralegal, name='para'),
+    path('customer',views.customer,name='customer'),
+    path('form_lawyer',views.user_search_lawyer_query, name='form_lawyer'),
+    path('lawyer',views.lawyer,name='lawyer'),
+    path('otherstaff',views.otherstaff,name='otherstaff'),
+    path('managing_partner',views.managing_partner,name='managing_partner')
 ]
 

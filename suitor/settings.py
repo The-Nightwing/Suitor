@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'suitor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'suitor',
-        'USER': 'admin',
-        'PASSWORD': '12345678',
-        'HOST': 'suitor.czjiaq8hoddl.us-east-2.rds.amazonaws.com',
+        'NAME': 'bp43zaph3l07degzwu5b',
+        'USER': 'u8hfxlxgegsfcshi',
+        'PASSWORD': 'etYZojI31Y1YlJiHXYnM',
+        'HOST': 'bp43zaph3l07degzwu5b-mysql.services.clever-cloud.com',
         'PORT': '3306',
     }
 }

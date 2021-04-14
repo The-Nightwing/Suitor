@@ -25,19 +25,19 @@
 
 <body>
     <div class="wrapper">
-        <form method="POST" action = "{% url 'para_query1' %}">
+        <form method="POST" action = "{% url 'paralegal' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q1" class="button btn btn-success">View their personal details</button>
         </form>
-        <form method="POST" action = "{% url 'para_query2' %}">
+        <form method="POST" action = "{% url 'paralegal' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:380px;" type="submit" value="1" name="q2" class="button btn btn-success">View/Add events</button>
         </form>
-        <form method="POST" action = "{% url 'para_query3' %}">
+        <form method="POST" action = "{% url 'paralegal' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:400px;" type="submit" value="1" name="q3" class="button btn btn-success">View all case details for all cases in the firm</button>
         </form>
-        <form method="POST" action = "{% url 'para_query4' %}">
+        <form method="POST" action = "{% url 'paralegal' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:420px;" type="submit" value="1" name="q4" class="button btn btn-success">View/update allowed legal documents for all cases in the firm</button>
         </form>
