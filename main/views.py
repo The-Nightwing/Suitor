@@ -211,13 +211,12 @@ def user_search_lawyer_query(request):
     return render(request, 'data.html', {'table': obj})
 
 def lawyer(request):
-
     if request.POST.get("q1"):
         context = {}
         with connection.cursor() as cursor:
             query = """
             CREATE OR REPLACE VIEW LawyerEvents AS
-            select * from calendar
+            select * from Calendar
             where userID = "{}";
             """
 
