@@ -9,7 +9,6 @@ from main.data import *
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 
-user = ''
 def index(request):
     return render(request,'main/index.html',{})
 
@@ -19,22 +18,23 @@ def login(request):
 def loginaccess(request):
    
     if request.POST['username'][0]=='Y':
-        user = request.POST['username']
+        writeinfile(request.POST['username'])
         if user_data[request.POST['username']]==request.POST['password']:
             return render(request,'main/paralegal.html',{})
     
     elif request.POST['username'][0]=='I':
-        user = request.POST['username']
+        writeinfile(request.POST['username'])
+        
         if user_data[request.POST['username']]==request.POST['password']:
             return render(request, 'main/customer.html',{})
     
     elif request.POST['username'][0]=='A':
-        user = request.POST['username']
+        writeinfile(request.POST['username'])
         if user_data[request.POST['username']]==request.POST['password']:
             return render(request, 'main/Lawyer.html',{})
 
     elif request.POST['username'][0]=='O':
-        user = request.POST['username']
+        writeinfile(request.POST['username'])
         if user_data[request.POST['username']]==request.POST['password']:
             return render(request, 'main/other_staff.html',{})
 
@@ -50,7 +50,8 @@ def paralegal(request):
         with connection.cursor() as cursor:
             query = """CREATE OR REPLACE VIEW myDetails AS SELECT * FROM Lawyer 
             WHERE userID = "{}";"""
-            query = query.format(user)
+
+            query = query.format(readfile())
             cursor.execute(query)
             
             cursor.execute("select * from myDetails;")
@@ -65,7 +66,7 @@ def paralegal(request):
         context = {}
         with connection.cursor() as cursor:
             query = "create or replace VIEW myEvents AS select * from Calendar where userID = '{}';"
-            query = query.format(user)
+            query = query.format(readfile())
         
             cursor.execute(query)
             cursor.execute("select * from myEvents;")
@@ -118,7 +119,7 @@ def customer(request):
             query="""create or replace view myDetailsClient as
             select * from IndividualClients
             where userID = "{}";"""
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from myDetailsClient;")
             data = cursor.fetchall()
@@ -135,7 +136,7 @@ def customer(request):
             select * from Calendar
             where userID = "{}";"""
 
-            query = query.format(user)
+            query = query.format(readfile())
             
             print(query)
             cursor.execute(query)
@@ -170,7 +171,7 @@ def customer(request):
             query = """create or replace view myBillsClient as 
             select f.transactionID, f.dateOfPayment, f.description, f.amount, c.caseID, c.flair, c.status from FinancialTransactions f, Invest i, HasA h, LegalCases c
             where f.transactionID = i.transactionid and i.caseID = h.caseID and h.caseID = c.caseID and h.userID = "{}";"""           
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from myBillsClient;")
             data = cursor.fetchall()
@@ -220,7 +221,7 @@ def lawyer(request):
             where userID = "{}";
             """
 
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from LawyerEvents;")
             data = cursor.fetchall()
@@ -240,7 +241,7 @@ def lawyer(request):
             from Handles inner join LegalCases 
             on legalCases.caseID=Handles.caseID and Handles.userID="{}";
             """
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from LawyerCases;")
             data = cursor.fetchall()
@@ -258,7 +259,7 @@ def lawyer(request):
             create or replace view LawyerDeets as 
             select * from Lawyer where userId="{}";
             """
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from LawyerDeets;")
             data = cursor.fetchall()
@@ -276,7 +277,7 @@ def lawyer(request):
             create or replace view otherlawyers as
             select firstname, lastname, emailId, specialization, experience, casesLost, casesSettled, avgTimePerCase, clientRating from Lawyer where userId="{}";
             """
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from otherlawyers;")
             data = cursor.fetchall()
@@ -317,7 +318,7 @@ def lawyer(request):
             on HasA.caseID=Handles.caseID);
             """
             
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from IndividualAsClients;")
             data = cursor.fetchall()
@@ -350,10 +351,12 @@ def otherstaff(request):
             select * from OtherStaff
             where userID = "{}";
             """
-            query = query.format(user)
+            
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from myDetailsStaff;")
             data = cursor.fetchall()
+
         context={}
 
         columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','salary','experience','emailID','phoneNumber','positionAtFirm','streetName','city','pincode','state']
@@ -366,7 +369,7 @@ def otherstaff(request):
             select * from Calendar
             where userID = "{}";
             """
-            query = query.format(user)
+            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from myEventsStaff;")
             data = cursor.fetchall()

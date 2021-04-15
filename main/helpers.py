@@ -112,3 +112,12 @@ def getdf(context, columns, data):
     file = file.replace("<table ", "<table class='rwd-table'")
     with open(os.path.join(BASE_DIR,"templates/data.html"), "w") as file_to_write:
         file_to_write.write(html + file)
+
+def writeinfile(string):
+  with open('user.txt','w') as writer:
+    writer.write(string)
+
+def readfile():
+  with open('user.txt','r') as reader:
+    user = reader.read()
+  return user 

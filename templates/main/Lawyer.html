@@ -25,33 +25,33 @@
 
 <body>
     <div class="wrapper">
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q1" class="button btn btn-success">View events (such as current court hearings related to ongoing cases).</button>
+            <button style = "position:relative; left:10px; top:320px;" type="submit" value="1" name="q1" class="button btn btn-success">View events (such as current court hearings related to ongoing cases).</button>
         </form>
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q2" class="button btn btn-success">View case details of all their cases.</button>
+            <button style = "position:relative; left:10px; top:340px;" type="submit" value="1" name="q2" class="button btn btn-success">View case details of all their cases.</button>
         </form>
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q3" class="button btn btn-success">View their personal details (financial history, track record).</button>
         </form>
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q4" class="button btn btn-success">View basic details of peers (not salary).</button>
+            <button style = "position:relative; left:10px; top:380px;" type="submit" value="1" name="q4" class="button btn btn-success">View basic details of peers (not salary).</button>
         </form>
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q5" class="button btn btn-success">View allowed documents related to any case of the law firm.</button>
+            <button style = "position:relative; left:10px; top:400px;" type="submit" value="1" name="q5" class="button btn btn-success">View allowed documents related to any case of the law firm.</button>
         </form>
-        <form method="POST" action = "{% url 'update_lawyer' %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q6" class="button btn btn-success">View data of all the Individual clients.</button>
+            <button style = "position:relative; left:10px; top:420px;" type="submit" value="1" name="q6" class="button btn btn-success">View data of all the Individual clients.</button>
         </form>
-         <form method="POST" action = "{% url 'update_lawyer' %}">
+         <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q7" class="button btn btn-success">Update Cases Won</button>
+            <button style = "position:relative; left:10px; top:440px;" type="submit" value="1" name="q7" class="button btn btn-success">Update Cases Won</button>
         </form>
     </div>
 </body>
