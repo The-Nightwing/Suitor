@@ -28,13 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'suitor.cleverapps.io',
     '127.0.0.1'
 ]
-
 
 # Application definition
 
@@ -87,10 +86,10 @@ WSGI_APPLICATION = 'suitor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('NAME',default=''),
-        'USER': config('USER',default=''),
-        'PASSWORD': config('PASSWORD',default=''),
-        'HOST': config('HOST',default=''),
+        'NAME': config('DBNAME',default=''),
+        'USER': config('DBUSER',default=''),
+        'PASSWORD': config('DBPASSWORD',default=''),
+        'HOST': config('DBHOST',default=''),
         'PORT': '3306',
     }
 }
