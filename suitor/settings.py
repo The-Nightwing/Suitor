@@ -17,7 +17,7 @@ import django_heroku
 from decouple import config
 pymysql.install_as_MySQLdb()
 
-os.getenv(".env")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'suitor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DBNAME',default=''),
-        'USER': config('DBUSER',default=''),
-        'PASSWORD': config('DBPASSWORD',default=''),
-        'HOST': config('DBHOST',default=''),
+        'NAME': os.getenv('DBNAME'),
+        'USER': os.getenv('DBUSER'),
+        'PASSWORD': os.getenv('DBPASSWORD'),
+        'HOST': os.getenv('DBHOST'),
         'PORT': '3306',
     }
 }
