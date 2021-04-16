@@ -238,7 +238,7 @@ def lawyer(request):
             CREATE OR REPLACE VIEW LawyerCases AS
             select LegalCases.caseID, plaintiff, lastDateOfActivity, flair, dateOfFiling, duration, LegalCases.status 
             from Handles inner join LegalCases 
-            on legalCases.caseID=Handles.caseID and Handles.userID="{}";
+            on LegalCases.caseID=Handles.caseID and Handles.userID="{}";
             """
             query = query.format(readfile())
             cursor.execute(query)
@@ -311,7 +311,7 @@ def lawyer(request):
             CREATE OR REPLACE VIEW IndividualsAsClients AS
             select * from IndividualClients where userID in (
             select HasA.userID 
-            from handles inner join Lawyer 
+            from Handles inner join Lawyer 
             on Handles.userID=Lawyer.userID and Lawyer.userID="{}" 
             inner join HasA 
             on HasA.caseID=Handles.caseID);
@@ -331,7 +331,7 @@ def lawyer(request):
         context = {}
         with connection.cursor() as cursor:
             query = """ 
-            update lawyer
+            update Lawyer
             set casesWon=casesWon+1
             where userID="{}";
             """            
