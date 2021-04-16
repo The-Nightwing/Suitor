@@ -2,3 +2,5 @@ env/
 env-2/
 staticfiles/
 .env
+data.py
+

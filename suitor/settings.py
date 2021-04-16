@@ -25,12 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1ov)(zulfdo0tpuug4ci@pd9oq%9&+-ikods%$kb_n1(xs8cyv'
+SECRET_KEY = config('SECRET_KEY', default='')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'suitor.cleverapps.io',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -84,10 +87,10 @@ WSGI_APPLICATION = 'suitor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bp43zaph3l07degzwu5b',
-        'USER': 'u8hfxlxgegsfcshi',
-        'PASSWORD': 'etYZojI31Y1YlJiHXYnM',
-        'HOST': 'bp43zaph3l07degzwu5b-mysql.services.clever-cloud.com',
+        'NAME': config('NAME',default=''),
+        'USER': config('USER',default=''),
+        'PASSWORD': config('PASSWORD',default=''),
+        'HOST': config('HOST',default=''),
         'PORT': '3306',
     }
 }
