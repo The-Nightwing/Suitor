@@ -3,7 +3,6 @@ from django.db import connection
 import pandas as pd
 from pathlib import Path
 import os
-import mysql.connector
 from django.shortcuts import HttpResponse
 
 html = """<style>
@@ -124,16 +123,7 @@ def readfile():
   return user 
 
 
-def connectdb():
-  mydb = mysql.connector.connect(
-    host='bp43zaph3l07degzwu5b-mysql.services.clever-cloud.com',
-    user="u8hfxlxgegsfcshi",
-    password="etYZojI31Y1YlJiHXYnM",
-    database='bp43zaph3l07degzwu5b'
-  )
 
-  cursor = mydb.cursor()
-  return cursor
 
 
   
