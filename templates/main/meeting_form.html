@@ -184,28 +184,16 @@ body {
 </head>
 <body>
 <div class="login-box">
-  <h2>Find Your Lawyer</h2>
-  <form method="POST" action="{% url 'form_lawyer' %}">
+  <h2>Add a new Event</h2>
+  <form method="POST" action="{% url 'meeting_form' %}">
     {% csrf_token %}
     <div class="user-box">
-      <input type="text" name="specialization" required="">
-      <label>Specialization</label>
+      <input type="text" name="time" required="" placeholder="">
+      <label>Time(YY-MM-DD hh:mm:ss)</label>
     </div>
     <div class="user-box">
-      <input type="text" name="clientRating" required="">
-      <label>clientRating</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="Experience" required="">
-      <label>Experience</label>
-    </div>
-     <div class="user-box">
-      <input type="text" name="charges" required="">
-      <label>Charges</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="avgTimePerCase" required="">
-      <label>avgTimePerCase</label>
+      <input type="text" name="description" required="" placeholder="">
+      <label>Description</label>
     </div>
      <button type="submit" class="btn btn-1" value="form">
       <span></span>

@@ -14,7 +14,7 @@ def index(request):
 
 def login(request):
     return render(request,'main/login.html',{})
-#
+
 def loginaccess(request):
    
     if request.POST['username'][0]=='Y':
@@ -24,7 +24,6 @@ def loginaccess(request):
     
     elif request.POST['username'][0]=='I':
         writeinfile(request.POST['username'])
-        
         if user_data[request.POST['username']]==request.POST['password']:
             return render(request, 'main/customer.html',{})
     
@@ -39,7 +38,7 @@ def loginaccess(request):
             return render(request, 'main/other_staff.html',{})
 
     elif request.POST['username']=='Harvey':
-        if request.POST['password']=='Specter':
+        if user_data[request.POST['username']]==request.POST['password']:
             return render(request,'main/managing_partner.html',{})
 
     return render(request,'main/user1.html',{})
@@ -109,6 +108,8 @@ def paralegal(request):
         obj = getdf(context, columns, data)
         return render(request, 'data.html', {'table': obj})
 
+    elif request.POST.get("q5"):
+        return render(request,'main/meeting_form.html',{})
     return render(request,'main/user1.html',{})
 
 def customer(request):
@@ -191,14 +192,16 @@ def user_search_lawyer_query(request):
     clientRating = request.POST['clientRating']
     experience = request.POST['Experience']
     avgtime = request.POST['avgTimePerCase']
+    charges = request.POST['charges']
 
 
     context = {}
     with connection.cursor() as cursor:
         query = """Create or Replace view BestSuitedLawyer as select Lawyer.firstname, Lawyer.lastname, Lawyer.userID from Lawyer 
-        where specialization="{}" and experience >= {} and avgTimePerCase <= {} and charges <= 30000 and clientRating >= {} and casesWon div casesLost >= 0;
+        where (specialization="{}" or specialization="{}") and experience >= {} and avgTimePerCase <= {} and charges <= {} and clientRating >= {} and casesWon div casesLost >= 0;
         """            
-        query = query.format(specialization,experience,avgtime,clientRating)
+        
+        query = query.format(specialization,specialization.replace(" ",""),experience,avgtime,charges,clientRating)
         print(query)
         cursor.execute(query)
         cursor.execute("select * from BestSuitedLawyer;")
@@ -231,7 +234,7 @@ def lawyer(request):
 
         return render(request, 'data.html', {'table': obj})
 
-    if request.POST.get("q2"):
+    elif request.POST.get("q2"):
         context = {}
         with connection.cursor() as cursor:
             query = """
@@ -251,7 +254,7 @@ def lawyer(request):
 
         return render(request, 'data.html', {'table': obj})
 
-    if request.POST.get("q3"):
+    elif request.POST.get("q3"):
         context = {}
         with connection.cursor() as cursor:
             query = """
@@ -269,14 +272,13 @@ def lawyer(request):
 
         return render(request, 'data.html', {'table': obj})
 
-    if request.POST.get("q4"):
+    elif request.POST.get("q4"):
         context = {}
         with connection.cursor() as cursor:
             query = """
             create or replace view otherlawyers as
-            select firstname, lastname, emailId, specialization, experience, casesLost, casesSettled, avgTimePerCase, clientRating from Lawyer where userId="{}";
+            select firstname, lastname, emailId, specialization, experience, casesLost, casesSettled, avgTimePerCase, clientRating from Lawyer;
             """
-            query = query.format(readfile())
             cursor.execute(query)
             cursor.execute("select * from otherlawyers;")
             data = cursor.fetchall()
@@ -415,7 +417,7 @@ def managing_partner(request):
         return render(request, 'data.html')
 
 
-    if request.POST.get("q2"):
+    elif request.POST.get("q2"):
         with connection.cursor() as cursor:
             query="""CREATE OR REPLACE VIEW myEventsManagement AS
             select * from Calendar
@@ -433,7 +435,7 @@ def managing_partner(request):
         return render(request, 'data.html')
 
 
-    if request.POST.get("q3"):
+    elif request.POST.get("q3"):
         with connection.cursor() as cursor:
             query="""CREATE OR REPLACE VIEW allFinancialTrans AS
             select * from FinancialTransactions ;
@@ -450,7 +452,7 @@ def managing_partner(request):
         return render(request, 'data.html')
 
 
-    if request.POST.get("q4"):
+    elif request.POST.get("q4"):
         with connection.cursor() as cursor:
             query="""CREATE OR REPLACE VIEW ChooseLawyerRatio AS
             Select *  From Lawyer where round(casesWon/casesLost) in
@@ -469,7 +471,7 @@ def managing_partner(request):
         return render(request, 'data.html')
 
 
-    if request.POST.get("q5"):
+    elif request.POST.get("q5"):
         with connection.cursor() as cursor:
             query="""
             CREATE OR REPLACE VIEW ChooseLawyerRating AS
@@ -487,3 +489,28 @@ def managing_partner(request):
         getdf(context, columns, data)
 
         return render(request, 'data.html')
+
+
+def meeting_form(request):
+    time=request.POST['time']
+    description = request.POST['description']
+    print(time)
+    print(description)
+    context = {}
+
+    with connection.cursor() as cursor:
+        query="""
+            CREATE OR REPLACE VIEW myEventsManagement AS
+            select * from Calendar
+            where userID = "{}";
+        """
+        query = query.format(readfile())
+        cursor.execute(query)
+
+        query = """
+            insert into myEventsManagement values("{}", '{}',"{}");
+        """            
+        query = query.format(readfile(),time,description)
+        cursor.execute(query)
+
+    return redirect('login')
