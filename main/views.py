@@ -337,9 +337,9 @@ def lawyer(request):
             set casesWon=casesWon+1
             where userID="{}";
             """            
-            # query=query.format(user)
-            # cursor.execute(query)
-            # cursor.execute("select * from BestSuitedLawyer;")
+            query=query.format(readfile())
+            cursor.execute(query)
+    
         return HttpResponseRedirect('login')
 
     return render(request,'main/user1.html',{})
