@@ -3,7 +3,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Paralegal</title>
+    <title>Customer</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,26 +27,30 @@
 
 <body>
     <div class="wrapper">
-        <form method="POST" action = "{% url 'paralegal' %}">
+        <form method="POST" action = "{% url 'customer_client' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:260px;" type="submit" value="1" name="q1" class="btn"><span>View their personal details</span></button>
+            <button style = "position:relative; left:10px; top:260px;" type="submit" value="1" name="q1" class="btn"><span>View their personal details.</span></button>
         </form>
-        <form method="POST" action = "{% url 'paralegal' %}">
+        <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:280px;" type="submit" value="1" name="q2" class="btn"><span>View events</span></button>
         </form>
-        <form method="POST" action = "{% url 'paralegal' %}">
+        <form method="POST" action = "{% url 'customer_client' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:300px;" type="submit" value="1" name="q3" class="btn"><span>View all case details for all cases in the firm</span></button>
+            <button style = "position:relative; left:10px; top:300px;" type="submit" value="1" name="q3" class="btn"><span>View case details of all their cases</span></button>
         </form>
-        <form method="POST" action = "{% url 'paralegal' %}">
+        <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:320px;" type="submit" value="1" name="q4" class="btn"><span>View allowed legal documents for all cases in the firm</span></button>
+            <button style = "position:relative; left:10px; top:320px;" type="submit" value="1" name="q4" class="btn"><span>View all bills</span></button>
         </form>
-        <form method="POST" action = "{% url 'paralegal' %}">
+        <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:340px;" type="submit" value="1" name="q5" class="btn"><span>Add Meeting</span></button>
+            <button style = "position:relative; left:10px; top:340px;" type="submit" value="1" name="q5" class="btn"><span>Find the Best Suited Lawyer for You</span></button>
         </form>
-    </div>
+        <form method="POST" action = "{% url 'customer' %}">
+        {% csrf_token %}
+            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q6" class="btn"><span>Add meeting</span></button>
+        </form>
+       
 </body>
 </html>

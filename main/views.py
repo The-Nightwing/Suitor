@@ -17,28 +17,39 @@ def login(request):
 
 def loginaccess(request):
    
-    if request.POST['username'][0]=='Y':
-        writeinfile(request.POST['username'])
-        if user_data[request.POST['username']]==request.POST['password']:
-            return render(request,'main/paralegal.html',{})
-    
-    elif request.POST['username'][0]=='I':
-        writeinfile(request.POST['username'])
-        if user_data[request.POST['username']]==request.POST['password']:
+    if request.POST['username'][0]=='I':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
             return render(request, 'main/customer.html',{})
+
+    if request.POST['username'][0]=='Y':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            return render(request, 'main/customer_client_company.html',{})
+    
     
     elif request.POST['username'][0]=='A':
-        writeinfile(request.POST['username'])
-        if user_data[request.POST['username']]==request.POST['password']:
-            return render(request, 'main/Lawyer.html',{})
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            with connection.cursor() as cursor:
+                query="select positionAtFirm from Lawyer where userID='{}'"
+                query = query.format(readfile())
+                cursor.execute(query)
+                data = cursor.fetchall()
+            print(data)
+            if data[0][0]=='Paralegal':
+                return render(request,'main/paralegal.html',{})
+            else:
+                return render(request, 'main/Lawyer.html',{})
 
     elif request.POST['username'][0]=='O':
-        writeinfile(request.POST['username'])
-        if user_data[request.POST['username']]==request.POST['password']:
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
             return render(request, 'main/other_staff.html',{})
 
     elif request.POST['username']=='Harvey':
-        if user_data[request.POST['username']]==request.POST['password']:
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
             return render(request,'main/managing_partner.html',{})
 
     return render(request,'main/user1.html',{})
@@ -49,12 +60,14 @@ def paralegal(request):
         with connection.cursor() as cursor:
             query = """CREATE OR REPLACE VIEW myDetails AS SELECT * FROM Lawyer 
             WHERE userID = "{}";"""
-
+            
             query = query.format(readfile())
+            
             cursor.execute(query)
             
             cursor.execute("select * from myDetails;")
             data = cursor.fetchall()
+            print(data)
         context={}
         columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','charges','casesWon','casesLost','casesSettled','experience','emailID','phoneNumber','positionAtFirm','avgTimePerCase','streetName','city','pincode','state','specialization','clientRating']
 
@@ -111,6 +124,42 @@ def paralegal(request):
     elif request.POST.get("q5"):
         return render(request,'main/meeting_form.html',{})
     return render(request,'main/user1.html',{})
+
+
+
+def customer_client(request):
+    if request.POST.get("q1"):
+        with connection.cursor() as cursor:
+            query="""create or replace view myDetailsClientCompany as
+            select * from ClientCompanies
+            where userID = "{}";"""
+            query = query.format(readfile())
+            cursor.execute(query)
+            cursor.execute("select * from myDetailsClientCompany;")
+            data = cursor.fetchall()
+
+        context={}
+
+        columns= ['userID','firstName','middleName','lastName','budget','emailID','phoneNumber','streetName','city','pincode','state','isClient','fax','companyName','gstIN']
+        getdf(context, columns, data)
+        return render(request, 'data.html')
+
+    elif request.POST.get("q3"):
+        context = {}
+        with connection.cursor() as cursor:
+            query = """create or replace view allMyCasesClientCompanies as 
+            select h.caseID, c.plaintiff, c.lastDateOfActivity, c.flair, c.dateOfFiling, c.duration, c.status, l.userID as LawyerID, l.firstName as LFirstName, l.lastName as LLastName, l.emailID as LEmailID, l.positionAtFirm, l.specialization, l.city as LCity, o.oppositionID, o.firstName as OFirstName, o.lastName as OLastName from Lawyer l, Handles h, LegalCases c, HasA ch, ClientCompanies ic, Opposition o, Against a
+            where l.userID = h.userID and h.caseID = c.caseID and ch.userID = ic.userID and a.oppositionID = o.oppositionID and a.caseID = c.caseID;
+            """            
+            cursor.execute(query)
+            cursor.execute("select * from allMyCasesClientCompanies;")
+            data = cursor.fetchall()
+
+        columns = ['caseID', 'plaintiff', 'lastDateOfActivity', 'flair', 'dateOfFiling', 'duration', 'status', 'userID']
+
+        obj = getdf(context,columns,data)
+
+        return render(request, 'data.html', {'table': obj})
 
 def customer(request):
     print(request.POST)

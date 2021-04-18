@@ -17,6 +17,7 @@ urlpatterns = [
     path('lawyer',views.lawyer,name='lawyer'),
     path('otherstaff',views.otherstaff,name='otherstaff'),
     path('managing_partner',views.managing_partner,name='managing_partner'),
-    path('meeting_form',views.meeting_form,name='meeting_form')
+    path('meeting_form',views.meeting_form,name='meeting_form'),
+    path('customer_client',views.customer_client,name='customer_client')
 ]
 

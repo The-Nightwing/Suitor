@@ -1,1 +1,4 @@
-firstName,lastName,userID
+userID,firstName,middleName,lastName,dateOfBirth,gender,charges,casesWon,casesLost,casesSettled,experience,emailID,phoneNumber,positionAtFirm,avgTimePerCase,streetName,city,pincode,state,specialization,clientRating
+A21d1o5j7F,Kelly,Maisie,Munoz,1985-12-16,Female,5099,54,55,12,3,Donec.tempus@dictumeu.org,9187317580,Paralegal,50,9327 Consequat Ave,Envigado,OS96 7CP,Antioquia,Education,7
+A21d1o5j7F,Kelly,Maisie,Munoz,1985-12-16,Female,5099,54,55,12,3,Donec.tempus@dictumeu.org,9187317580,Paralegal,50,9327 Consequat Ave,Envigado,OS96 7CP,Antioquia,Real Estate,7
+A21d1o5j7F,Kelly,Maisie,Munoz,1985-12-16,Female,5099,54,55,12,3,Donec.tempus@dictumeu.org,9187317580,Paralegal,50,9327 Consequat Ave,Envigado,OS96 7CP,Antioquia,Tenant Law,7
