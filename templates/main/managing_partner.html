@@ -45,6 +45,11 @@
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:440px;" type="submit" value="1" name="q5" class="button btn btn-success">Choose lawyer on the basis of rating</button>
         </form>
+        <form method="POST" action = "{% url 'managing_partner' %}">
+        {% csrf_token %}
+            <button style = "position:relative; left:10px; top:460px;" type="submit" value="1" name="q6" class="button btn btn-success">Add Meeting</button>
+        </form>
+        
     </div>
 </body>
 </html>

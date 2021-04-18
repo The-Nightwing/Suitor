@@ -185,6 +185,9 @@ def customer(request):
     elif request.POST.get("q5"):
         return render(request,'main/form_lawyer.html',{})
 
+    elif request.POST.get("q6"):
+        return render(request,'main/meeting_form.html',{})
+
     return render(request,'main/user1.html',{})
 
 def user_search_lawyer_query(request):
@@ -321,7 +324,7 @@ def lawyer(request):
             
             query = query.format(readfile())
             cursor.execute(query)
-            cursor.execute("select * from IndividualAsClients;")
+            cursor.execute("select * from IndividualsAsClients;")
             data = cursor.fetchall()
 
         columns = ['userID','firstName','middleName','lastName','dateOfBirth','budget','emailID','phoneNumber','streetName','city','pincode','state','isClient']
@@ -339,8 +342,11 @@ def lawyer(request):
             """            
             query=query.format(readfile())
             cursor.execute(query)
-    
+            # cursor.execute("select * from BestSuitedLawyer;")
         return HttpResponseRedirect('login')
+
+    elif request.POST.get("q8"):
+        return render(request,'main/meeting_form.html',{})
 
     return render(request,'main/user1.html',{})
 
@@ -396,6 +402,9 @@ def otherstaff(request):
         getdf(context, columns, data)
 
         return render(request, 'data.html')
+
+    elif request.POST.get("q5"):
+        return render(request,'main/meeting_form.html',{})
 
 
 def managing_partner(request):
@@ -489,6 +498,9 @@ def managing_partner(request):
         getdf(context, columns, data)
 
         return render(request, 'data.html')
+
+    elif request.POST.get("q6"):
+        return render(request,'main/meeting_form.html',{})
 
 
 def meeting_form(request):
