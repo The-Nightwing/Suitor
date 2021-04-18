@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/new.css' %}">
+
     <style>
         .wrapper {
     text-align: center;
@@ -27,28 +29,28 @@
     <div class="wrapper">
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q1" class="button btn btn-success">View their personal details.</button>
+            <button style = "position:relative; left:10px; top:260px;" type="submit" value="1" name="q1" class="btn"><span>View their personal details.</span></button>
         </form>
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:380px;" type="submit" value="1" name="q2" class="button btn btn-success">View events</button>
+            <button style = "position:relative; left:10px; top:280px;" type="submit" value="1" name="q2" class="btn"><span>View events</span></button>
         </form>
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:400px;" type="submit" value="1" name="q3" class="button btn btn-success">View case details of all their cases</button>
+            <button style = "position:relative; left:10px; top:300px;" type="submit" value="1" name="q3" class="btn"><span>View case details of all their cases</span></button>
         </form>
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:420px;" type="submit" value="1" name="q4" class="button btn btn-success">View all bills </button>
+            <button style = "position:relative; left:10px; top:320px;" type="submit" value="1" name="q4" class="btn"><span>View all bills</span></button>
         </form>
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:440px;" type="submit" value="1" name="q5" class="button btn btn-success">Find the Best Suited Lawyer for You</button>
+            <button style = "position:relative; left:10px; top:340px;" type="submit" value="1" name="q5" class="btn"><span>Find the Best Suited Lawyer for You</span></button>
         </form>
         <form method="POST" action = "{% url 'customer' %}">
         {% csrf_token %}
-            <button style = "position:relative; left:10px; top:460px;" type="submit" value="1" name="q6" class="button btn btn-success">Add Meeting</button>
+            <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q6" class="btn"><span>Add meeting</span></button>
         </form>
-    </div>
+       
 </body>
 </html>
