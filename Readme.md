@@ -4,20 +4,15 @@
 
 ## **Group 57**
 
-→
-## **Aditi Sejal (2019228)**
+## →**Aditi Sejal (2019228)**
 
-→
-## **Neha Goel (2019066)**
+##→ **Neha Goel (2019066)**
 
-→
-## **Shivam Verma (2019272)**
+##→ **Shivam Verma (2019272)**
 
-→
-## **Kushagra Gupta (2019056)**
+##→ **Kushagra Gupta (2019056)**
 
-→
-## **Karish Grover (2019471)**
+##→ **Karish Grover (2019471)**
 
 # **WEEK 1:**
 
