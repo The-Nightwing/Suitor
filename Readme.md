@@ -20,8 +20,6 @@
 
 **Brief Overview:**
 
-![](RackMultipart20210419-4-1bzmb8v_html_237499165a11f2b9.gif)
-
 The applicationmanages data of various aspects of the firm, like details of lawyers, their ongoing cases, employee earnings, partner earnings, firm earnings, firm expenditure etc. The Managing Partner of the firm lies at the topmost position in the hierarchy of stakeholders and has access to all the information in the database. All the other stakeholders i.e. Firm Partners, Employees (Associates, Paralegals, Secretaries, Office management, IT, HR, Finance and Accounting, Support staff etc.), Clients, Bar Council etc. have various levels of authorization and their views are tailored accordingly.
 
 **Problem statement**
