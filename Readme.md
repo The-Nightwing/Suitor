@@ -6,13 +6,13 @@
 
 ## →**Aditi Sejal (2019228)**
 
-##→ **Neha Goel (2019066)**
+## → **Neha Goel (2019066)**
 
-##→ **Shivam Verma (2019272)**
+## → **Shivam Verma (2019272)**
 
-##→ **Kushagra Gupta (2019056)**
+## → **Kushagra Gupta (2019056)**
 
-##→ **Karish Grover (2019471)**
+## → **Karish Grover (2019471)**
 
 # **WEEK 1:**
 
@@ -55,12 +55,12 @@ The applicationmanages data of various aspects of the firm, like details of lawy
 
 **DriveFolder:** [**T57DBMS**](https://drive.google.com/drive/folders/1V3pMuC_WwGdap7TZx3Og0ztL-sgT29ZA?usp=sharing)
 
--
-## **ER-DIAGRAM**
--
-## **SCHEMA**
--
-## **DATABASE TABLES**
+
+## - **ER-DIAGRAM**
+
+## - **SCHEMA**
+
+## - **DATABASE TABLES**
 
 **Schema**
 
