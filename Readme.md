@@ -452,9 +452,7 @@ Divorce|Tenant Law|Crime|Civil|Real Estate|Bankruptcy|Finance|Family Law|Traffic
 Following are the search key attributes for index tables of different tables based on which attributes are accessed most.
 
 | **ENTITY** | **ATTRIBUTE(S) USED FOR INDEXING** |
-
 | --- | --- |
-
 | Legal Cases | caseID, flair |
 | User | userID |
 | LegalDocuments | docID, caseID, visibility |
