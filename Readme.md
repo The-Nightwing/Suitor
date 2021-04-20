@@ -471,8 +471,7 @@ Following are the search key attributes for index tables of different tables bas
 | Makes | transactionID, userID |
 | IndividualClients | userID |
  
-## **WOW PART**
-**of the project**
+## **WOW PART of the Project**
 
 1. A fully functional, interactive and aesthetic web application.
 2. Functionality to find best-suited lawyers for customers based on their preferences and requirements taken as input.
@@ -480,7 +479,6 @@ Following are the search key attributes for index tables of different tables bas
 4. Implemented a total of 23 MySQL queries through embedded SQL and UI.
 
 ## LINKS
- ![](RackMultipart20210419-4-1bzmb8v_html_7e4755477bf162d7.png)
 
 **MAIN WEBSITE**
 
