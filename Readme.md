@@ -522,11 +522,16 @@ Following are the search key attributes for index tables of different tables bas
 ## LINKS
  ![](RackMultipart20210419-4-1bzmb8v_html_7e4755477bf162d7.png)
 
-**MAIN WEBSITE WEBSITE BACKEND PROJECT REPOSITORY**
+**MAIN WEBSITE**
 
-<a href="https://suitor.cleverapps.io/"><img src="images/suitorimage.jpg"></a>
+<a href="https://suitor.cleverapps.io/" target="_blank"><img src="images/suitorimage.jpg"></a>
 
- ![](images/github1.jpg)  ![](images/github2.jpg)
+**WEBSITE BACKEND**
+<a href="https://github.com/The-Nightwing/Suitor" target="_blank"><img src="images/github1.jpg"></a>
+
+**PROJECT REPOSITORY**
+<a href="https://github.com/neha19066/Suitor" target="_blank"><img src="images/github2.jpg"></a>
+
 
 **ID PASSWORD FOR TESTING STAKEHOLDERS :**
 
