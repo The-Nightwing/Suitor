@@ -531,4 +531,6 @@ Following are the search key attributes for index tables of different tables bas
 
 **References for Templates used**
 - Design by StyleShout
-- codepen.io
+- <a href="https://codepen.io/">Clever Cloud</a>
+
+**Database and Website hosted on <a href="https://www.clever-cloud.com/">Clever Cloud</a>**
