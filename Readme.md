@@ -298,7 +298,6 @@ The application manages data of various aspects of the firm, like details of law
 | --- | --- | --- |
 | transactionID | char(10) | Primary Key |
 | description | varchar(256) |
- |
 | amount | mediumint | Not null, check not equal to 0 |
 | type | tinyint | Not null, check is &#39;1&#39; or &#39;0&#39; for take and give respectively |
 | dateOfPayment | date | Not null |
