@@ -453,63 +453,27 @@ Following are the search key attributes for index tables of different tables bas
 
 | **ENTITY** | **ATTRIBUTE(S) USED FOR INDEXING** |
 
+| --- | --- |
 
-1. **Legal Cases**
- | **caseID, flair** |
-|
-1. **User**
- | **userID** |
-|
-1. **LegalDocuments**
- | **docID, caseID, visibility** |
-|
-1. **Lawyers**
- | **userID, specialization, city, lastName, charges,**  **experience, clientRating, avgTimePerCase** |
-|
-1. **Opposition**
- | **OppositionID** |
-|
-1. **Calendar**
- | **userID, when** |
-|
-1. **Other staff**
- | **userID** |
-|
-1. **Managing partners**
- | **userID** |
-|
-1. **Against**
- | **caseID, oppositionID** |
-|
-1. **ClientCompanies**
- | **userID** |
-|
-1. **Clients**
- | **userID** |
-|
-1. **CourtHearing**
- | **caseID, time** |
-|
-1. **FinancialTransactions**
- | **transactionID** |
-|
-1. **DisplayedIn**
- | **caseID, when, userID** |
-|
-1. **Handles**
- | **userID, caseID** |
-|
-1. **HasA**
- | **userID, caseID** |
-|
-1. **Invest**
- | **transactionID, userID** |
-|
-1. **Makes**
- | **transactionID, userID** |
-|
-1. **IndividualClients**
- | **userID** |
+|Legal Cases | caseID, flair|
+|User | userID |
+|LegalDocuments | docID, caseID, visibility |
+|Lawyers | userID, specialization, city, lastName, charges,experience, clientRating,  avgTimePerCase|
+|Opposition | OppositionID |
+|Calendar | userID, when |
+|Other staff | userID|
+|Managing partners | userID |
+|Against | caseID, oppositionID |
+| ClientCompanies | userID |
+|Clients | userID |
+|CourtHearing | caseID, time |
+|FinancialTransactions| transactionID |
+|DisplayedIn| caseID, when, userID |
+|Handles |userID, caseID |
+|HasA| userID, caseID |
+|Invest| transactionID, userID |
+|Makes|transactionID, userID |
+|IndividualClients| userID |
 
 ## **WOW PART**
 **of the project**
