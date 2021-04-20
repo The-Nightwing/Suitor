@@ -524,7 +524,7 @@ Following are the search key attributes for index tables of different tables bas
 
 **MAIN WEBSITE WEBSITE BACKEND PROJECT REPOSITORY**
 
-![[suitor](images/suitorimage.jpg)](www.google.com)  ![](images/github1.jpg)  ![](images/github2.jpg)
+![(images/suitorimage.jpg)](https://suitor.cleverapps.io/)  ![](images/github1.jpg)  ![](images/github2.jpg)
 
 **ID PASSWORD FOR TESTING STAKEHOLDERS :**
 
