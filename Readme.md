@@ -123,7 +123,6 @@ The application manages data of various aspects of the firm, like details of law
 | phoneNumber | char(10) | Not null |
 | positionAtFirm | varchar(100) | Not null, check in Associate, Lawyer, Paralegal, Partner |
 | avgTimePerCase | mediumint |
- |
 | buildingNumber | int | Not null, composite attribute (address) |
 | pincode | int |
 | streetName | varchar(256) |
@@ -172,7 +171,6 @@ The application manages data of various aspects of the firm, like details of law
 | phoneNumber | char(10) | Not null |
 | emailID | varchar(256) | Not null |
 | fax | varchar(100) |
- |
 | buildingNumber | int | Not null, composite attribute (address) |
 | pincode | varchar(10) |
 | streetName | varchar(256) |
@@ -193,7 +191,6 @@ The application manages data of various aspects of the firm, like details of law
 | caseID | char(15) | Foreign Key part of Primary Key along with time, not null |
 | time | time | Part of Primary Key along with caseID, Not null, check (time \&gt; &#39;09:00&#39; AND time \&lt; &#39;19:00&#39;) |
 | nextHearingDate | date |
- |
 | courtRoom | varchar(256) | Not null |
 
 **DisplayedIn**
@@ -204,8 +201,7 @@ The application manages data of various aspects of the firm, like details of law
 | --- | --- | --- |
 | userID | char(10) | Not null, Foreign key, part of Primary key along with caseID, when |
 | caseID | char(15) | Not null, Foreign key, part of Primary key along with userID, when |
-| when | datetime | Not null, Foreign key, part of Primary key along with userID, caseID
- |
+| when | datetime | Not null, Foreign key, part of Primary key along with userID, caseID |
 
 **IndividualClients**
 
@@ -227,8 +223,7 @@ The application manages data of various aspects of the firm, like details of law
 | city | varchar(50) |
 | state | varchar(50) |
 | budget | mediumint | Not null, check != 0 |
-| _calendarID_ | char(10) | Foreign Key referenced by Calendar
- |
+| _calendarID_ | char(10) | Foreign Key referenced by Calendar |
 
 **Handles**
 
@@ -374,11 +369,11 @@ Divorce|Tenant Law|Crime|Civil|Real Estate|Bankruptcy|Finance|Family Law|Traffic
 
 **ER DIAGRAM**
 
-![](RackMultipart20210419-4-1bzmb8v_html_e9be33a1cbf87cdc.png)
+![](images/er.jpeg)
 
 **SCHEMA DIAGRAM**
 
-![](RackMultipart20210419-4-1bzmb8v_html_e74e278ef5a9519f.png)
+![](images/schema.png)
 
 **Users with different views**
 
