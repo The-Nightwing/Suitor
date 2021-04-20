@@ -524,7 +524,7 @@ Following are the search key attributes for index tables of different tables bas
 
 **MAIN WEBSITE WEBSITE BACKEND PROJECT REPOSITORY**
 
-<a href="https://suitor.cleverapps.io/"><img id="im" src=images/suitorimage.jpg"></a>
+<a href="https://suitor.cleverapps.io/"><img src="images/suitorimage.jpg"></a>
 
  ![](images/github1.jpg)  ![](images/github2.jpg)
 
