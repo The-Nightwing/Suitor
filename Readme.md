@@ -315,17 +315,7 @@ The application manages data of various aspects of the firm, like details of law
 | oppositionID | char(10) | Foreign key, Primary key along with oppositionID, Not null |
 | caseID | char(15) | Foreign key, Primary key along with caseID, Not null |
 
-**Calendar---previous**
-
-**--------------------------------------------------------------------------**
-
-| **Variable** | **Datatype** | **Integrity Constraints** |
-| --- | --- | --- |
-| calendarID | char(10) | Primary Key |
-| event | char(10) | Not null |
-| description | varchar(256) | Not null |
-
-**Calendar --updated**
+**Calendar**
 
 **--------------------------------------------------------------------------**
 
