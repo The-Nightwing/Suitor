@@ -455,26 +455,26 @@ Following are the search key attributes for index tables of different tables bas
 
 | --- | --- |
 
-|Legal Cases | caseID, flair|
-|User | userID |
-|LegalDocuments | docID, caseID, visibility |
-|Lawyers | userID, specialization, city, lastName, charges,experience, clientRating,  avgTimePerCase|
-|Opposition | OppositionID |
-|Calendar | userID, when |
-|Other staff | userID|
-|Managing partners | userID |
-|Against | caseID, oppositionID |
+| Legal Cases | caseID, flair |
+| User | userID |
+| LegalDocuments | docID, caseID, visibility |
+| Lawyers | userID, specialization, city, lastName, charges,experience, clientRating,  avgTimePerCase |
+| Opposition | OppositionID |
+| Calendar | userID, when |
+| Other staff | userID|
+| Managing partners | userID |
+| Against | caseID, oppositionID |
 | ClientCompanies | userID |
-|Clients | userID |
-|CourtHearing | caseID, time |
-|FinancialTransactions| transactionID |
-|DisplayedIn| caseID, when, userID |
-|Handles |userID, caseID |
-|HasA| userID, caseID |
-|Invest| transactionID, userID |
-|Makes|transactionID, userID |
-|IndividualClients| userID |
-
+| Clients | userID |
+| CourtHearing | caseID, time |
+| FinancialTransactions | transactionID |
+| DisplayedIn | caseID, when, userID |
+| Handles | userID, caseID |
+| HasA | userID, caseID |
+| Invest | transactionID, userID |
+| Makes | transactionID, userID |
+| IndividualClients | userID |
+ 
 ## **WOW PART**
 **of the project**
 
