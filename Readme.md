@@ -49,9 +49,6 @@ The application manages data of various aspects of the firm, like details of law
 - User **keeps tracks** of schedule using calendar
 - Court Hearing are **displayedIn** Calendar
 
-**DriveFolder:** [**T57DBMS**](https://drive.google.com/drive/folders/1V3pMuC_WwGdap7TZx3Og0ztL-sgT29ZA?usp=sharing)
-
-
 ## - **ER-DIAGRAM**
 
 ## - **SCHEMA**
