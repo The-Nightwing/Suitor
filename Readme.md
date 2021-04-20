@@ -452,8 +452,8 @@ Divorce|Tenant Law|Crime|Civil|Real Estate|Bankruptcy|Finance|Family Law|Traffic
 Following are the search key attributes for index tables of different tables based on which attributes are accessed most.
 
 | **ENTITY** | **ATTRIBUTE(S) USED FOR INDEXING** |
-| --- | --- |
-|
+
+
 1. **Legal Cases**
  | **caseID, flair** |
 |
@@ -527,9 +527,11 @@ Following are the search key attributes for index tables of different tables bas
 <a href="https://suitor.cleverapps.io/" target="_blank"><img src="images/suitorimage.jpg"></a>
 
 **WEBSITE BACKEND**
+
 <a href="https://github.com/The-Nightwing/Suitor" target="_blank"><img src="images/github1.jpg"></a>
 
 **PROJECT REPOSITORY**
+
 <a href="https://github.com/neha19066/Suitor" target="_blank"><img src="images/github2.jpg"></a>
 
 
@@ -571,16 +573,16 @@ Following are the search key attributes for index tables of different tables bas
 
 **Web Application Homepage**
 
-![](RackMultipart20210419-4-1bzmb8v_html_bd8dfd01778e197c.png)
+![](images/1.jpg)
 
-![](RackMultipart20210419-4-1bzmb8v_html_d19f895f133015ff.png)
+![](images/2.jpg)
 
-**User Query** : view allowed documents related to any case in the law firm. ![](RackMultipart20210419-4-1bzmb8v_html_535030141793b2bd.png) **Paralegal Query** : View all case details for all the cases in a firm. ![](RackMultipart20210419-4-1bzmb8v_html_17fe9f6ffd6c4eed.png)
+**Sign in Page**
+![](images/3.jpg)
 
-**Employee query :** Add meeting ![](RackMultipart20210419-4-1bzmb8v_html_e651b97c2d36728d.png)
+**One of the Stakeholder's Query Page**
+![](images/4.jpg)
 
-**Customer Query** : Find best suited lawyer based on inputted needs and wants ![](RackMultipart20210419-4-1bzmb8v_html_b64d4c2051ce6547.png) **Customer Query** : View all their bills ![](RackMultipart20210419-4-1bzmb8v_html_c2749290afadf2f7.png)
+**Ouput format of Queries**
+![](images/5.jpg)
 
-**Other Staff Query** : View/update all financial transactions in the firm ![](RackMultipart20210419-4-1bzmb8v_html_60dea12170cbb74.png)
-
-**Managing Partner Query** : Choose lawyer of the year on the basis of win/loss ratio ![](RackMultipart20210419-4-1bzmb8v_html_129b59a0cd4b7c00.png)
