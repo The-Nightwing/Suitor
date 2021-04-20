@@ -1,4 +1,4 @@
-![](images/suitor.jpg)
+<div style="text-align:center"><img src="images/suitor.jpg" /></div>
 
 ## **LAW FIRM DATABASE MANAGEMENT**
 
@@ -13,8 +13,6 @@
 ## → **Kushagra Gupta (2019056)**
 
 ## → **Karish Grover (2019471)**
-
-# **WEEK 1:**
 
 ## **Focus on discussing and coming up with a unique and creative idea for the Project**
 
