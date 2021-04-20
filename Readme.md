@@ -544,3 +544,7 @@ Following are the search key attributes for index tables of different tables bas
 **Ouput format of Queries**
 ![](images/5.jpg)
 
+
+**References for Templates used**
+- Design by StyleShout
+- codepen.io
