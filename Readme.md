@@ -1,4 +1,4 @@
-<p align="center"><img width="460" height="400" src="images/suitorimage.jpg"></p>
+<p align="center"><img width="460" height="600" src="images/suitor.jpg"></p>
 
 ## **LAW FIRM DATABASE MANAGEMENT**
 
