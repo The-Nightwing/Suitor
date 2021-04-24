@@ -1,20 +1,20 @@
 <p align="center"><img width="460" height="600" src="images/suitor.jpg"></p>
 
-## **LAW FIRM DATABASE MANAGEMENT**
+## 1. **LAW FIRM DATABASE MANAGEMENT**
 
-## **Group 57**
+## 2. **Group 57**
 
-## →**Aditi Sejal (2019228)**
+## 3. →**Aditi Sejal (2019228)**
 
-## → **Neha Goel (2019066)**
+## 4. → **Neha Goel (2019066)**
 
-## → **Shivam Verma (2019272)**
+## 5. → **Shivam Verma (2019272)**
 
-## → **Kushagra Gupta (2019056)**
+## 6. → **Kushagra Gupta (2019056)**
 
-## → **Karish Grover (2019471)**
+## 7. → **Karish Grover (2019471)**
 
-## **Focus on discussing and coming up with a unique and creative idea for the Project**
+## 8. **Focus on discussing and coming up with a unique and creative idea for the Project**
 
 **Brief Overview:**
 
@@ -49,11 +49,11 @@ The application manages data of various aspects of the firm, like details of law
 - User **keeps tracks** of schedule using calendar
 - Court Hearing are **displayedIn** Calendar
 
-## - **ER-DIAGRAM**
+## 9. - **ER-DIAGRAM**
 
-## - **SCHEMA**
+## 10. - **SCHEMA**
 
-## - **DATABASE TABLES**
+## 11. - **DATABASE TABLES**
 
 **Schema**
 
@@ -452,14 +452,14 @@ Following are the search key attributes for index tables of different tables bas
 | Makes | transactionID, userID |
 | IndividualClients | userID |
  
-## **WOW PART of the Project**
+## 12. **WOW PART of the Project**
 
 1. A fully functional, interactive and aesthetic web application.
 2. Functionality to find best-suited lawyers for customers based on their preferences and requirements taken as input.
 3. Implemented indexing using the _create index_ command in MySQL for efficient query handling.
 4. Implemented a total of 23 MySQL queries through embedded SQL and UI.
 
-## LINKS
+## 13. LINKS
 
 **MAIN WEBSITE**
 
