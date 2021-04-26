@@ -176,7 +176,6 @@ The application manages data of various aspects of the firm, like details of law
 | budget | mediumint | Not null |
 | companyName | varchar(256) | Not null |
 | gstIN | varchar(11) |
- |
 | calendarID | char(10) | Foreign Key referenced by Calendar |
 
 **CourtHearing**
