@@ -1,5 +1,0 @@
-{
-    "deploy": {
-        "module": "suitor.wsgi:application"
-    }
-}

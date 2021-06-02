@@ -324,14 +324,14 @@ body {
     margin: 0;
 }
 
-/* Render the 'main' element consistently in IE. */
+/* Render the main element consistently in IE. */
 
 main {
     display: block;
 }
 
-/* Correct the font size and margin on 'h1' elements within 'section' and
- * 'article' contexts in Chrome, Firefox, and Safari. */
+/* Correct the font size and margin on h1 elements within section and
+ * article contexts in Chrome, Firefox, and Safari. */
 
 h1 {
     font-size: 2em;
@@ -356,7 +356,7 @@ hr {
 }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd 'em' font sizing in all browsers. */
+ * 2. Correct the odd em font sizing in all browsers. */
 
 pre {
     font-family: monospace, monospace;
@@ -395,7 +395,7 @@ b, strong {
 }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd 'em' font sizing in all browsers. */
+ * 2. Correct the odd em font sizing in all browsers. */
 
 code, kbd, samp {
     font-family: monospace, monospace;
@@ -410,7 +410,7 @@ small {
     font-size: 80%;
 }
 
-/* Prevent 'sub' and 'sup' elements from affecting the line height in
+/* Prevent sub and sup elements from affecting the line height in
  * all browsers. */
 
 sub, sup {
@@ -498,9 +498,15 @@ fieldset {
 }
 
 /* 1. Correct the text wrapping in Edge and IE.
+<<<<<<< HEAD
  * 2. Correct the color inheritance from 'fieldset' elements in IE.
  * 3. Remove the padding so developers are not caught out whentt they zero out
  *    'fieldset' elements in all browsers. */
+=======
+ * 2. Correct the color inheritance from fieldset elements in IE.
+ * 3. Remove the padding so developers are not caught out whentttt they zero out
+ *    fieldset elements in all browsers. */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 legend {
     -webkit-box-sizing: border-box;
@@ -564,7 +570,7 @@ textarea {
 }
 
 /* 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to 'inherit' in Safari. */
+ * 2. Change font properties to inherit in Safari. */
 
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
@@ -2252,7 +2258,7 @@ select {
     -moz-appearance: none;
     appearance: none;
     text-indent: 0.01px;
-    text-overflow: '';
+    text-overflow: ;
     margin: 0;
     vertical-align: middle;
 }
@@ -2269,7 +2275,7 @@ select {
 .ss-custom-select::after {
     border-bottom: 2px solid var(--color-white);
     border-right: 2px solid var(--color-white);
-    content: '';
+    content: ;
     display: block;
     height: 8px;
     width: 8px;
@@ -2820,7 +2826,7 @@ input::-moz-focus-inner {
 
 .alert-box__close::before,
 .alert-box__close::after {
-    content: '';
+    content: ;
     position: absolute;
     display: inline-block;
     width: 2px;
@@ -3222,7 +3228,7 @@ input::-moz-focus-inner {
 
 .s-header__menu-toggle span::before,
 .s-header__menu-toggle span::after {
-    content: '';
+    content: ;
     width: 100%;
     height: 100%;
     background-color: inherit;

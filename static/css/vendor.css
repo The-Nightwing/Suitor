@@ -63,7 +63,7 @@
 }
 
 .lity-wrap:before {
-    content: '';
+    content: ;
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -118,7 +118,7 @@
 }
 
 .lity-content:after {
-    content: '';
+    content: ;
     position: absolute;
     left: 0;
     top: 0;
@@ -1571,7 +1571,7 @@
  * ------------------------------------------------------------------- */
 .prettyprint {
     background: var(--color-gray-2);
-    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
     font-size: 13px;
     line-height: 1.538;
     border-radius: 4px;
@@ -1719,10 +1719,14 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
     max-width: none;
 }
 
+<<<<<<< HEAD
 /* style is added whentt JS option showHideOpacity is set to true */
+=======
+/* style is added whentttt JS option showHideOpacity is set to true */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 .pswp--animate_opacity {
-    /* 0.001, because opacity:0 doesn't trigger Paint action, which causes lag at start of transition */
+    /* 0.001, because opacity:0 doesnt trigger Paint action, which causes lag at start of transition */
     opacity: 0.001;
     will-change: opacity;
     /* for open/close transition */
@@ -1851,7 +1855,11 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 
 /*
 	stretched thumbnail or div placeholder element (see below)
+<<<<<<< HEAD
 	style is added to avoid flickering in webkit/blink whentt layers overlap
+=======
+	style is added to avoid flickering in webkit/blink whentttt layers overlap
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 */
 
 .pswp__img--placeholder {
@@ -1875,7 +1883,11 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 /*
+<<<<<<< HEAD
 	Error message appears whentt image is not loaded
+=======
+	Error message appears whentttt image is not loaded
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 	(JS option errorMsg controls markup)
 */
 
@@ -1957,7 +1969,11 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 /* 
+<<<<<<< HEAD
 pswp__ui--over-close class it added whentt mouse is 
+=======
+pswp__ui--over-close class it added whentttt mouse is 
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 over element that should close gallery 
 */
 
@@ -2042,7 +2058,7 @@ Arrow buttons hit area
 }
 
 .pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
-    content: '';
+    content: ;
     top: 0;
     background-color: rgba(0, 0, 0, 0.3);
     height: 30px;
@@ -2153,7 +2169,7 @@ Arrow buttons hit area
 }
 
 a.pswp__share--facebook:before {
-    content: '';
+    content: ;
     display: block;
     width: 0;
     height: 0;
@@ -2280,7 +2296,7 @@ a.pswp__share--download:hover {
 }
 
 .pswp__preloader--active .pswp__preloader__icn {
-    /* We use .gif in browsers that don't support CSS animation */
+    /* We use .gif in browsers that dont support CSS animation */
 }
 
 .pswp--css_animation .pswp__preloader--active {
@@ -2432,7 +2448,11 @@ a.pswp__share--download:hover {
     transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 
+<<<<<<< HEAD
 /* pswp--has_mouse class is added only whentt two subsequent mousemove events occur */
+=======
+/* pswp--has_mouse class is added only whentttt two subsequent mousemove events occur */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 .pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
     visibility: visible;
@@ -2442,13 +2462,21 @@ a.pswp__share--download:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+<<<<<<< HEAD
 /* pswp__ui--fit class is added whentt main image "fits" between top bar and bottom bar (caption) */
+=======
+/* pswp__ui--fit class is added whentttt main image "fits" between top bar and bottom bar (caption) */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 .pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+<<<<<<< HEAD
 /* pswp__ui--idle class is added whentt mouse isn't moving for several seconds (JS option timeToIdle) */
+=======
+/* pswp__ui--idle class is added whentttt mouse isnt moving for several seconds (JS option timeToIdle) */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 .pswp__ui--idle .pswp__top-bar {
     opacity: 0;
@@ -2459,8 +2487,13 @@ a.pswp__share--download:hover {
 }
 
 /*
+<<<<<<< HEAD
 	pswp__ui--hidden class is added whentt controls are hidden
 	e.g. whentt user taps to toggle visibility of controls
+=======
+	pswp__ui--hidden class is added whentttt controls are hidden
+	e.g. whentttt user taps to toggle visibility of controls
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 */
 
 .pswp__ui--hidden .pswp__top-bar, .pswp__ui--hidden .pswp__caption, .pswp__ui--hidden .pswp__button--arrow--left, .pswp__ui--hidden .pswp__button--arrow--right {
@@ -2468,7 +2501,11 @@ a.pswp__share--download:hover {
     opacity: 0.001;
 }
 
+<<<<<<< HEAD
 /* pswp__ui--one-slide class is added whentt there is just one item in gallery */
+=======
+/* pswp__ui--one-slide class is added whentttt there is just one item in gallery */
+>>>>>>> 05a93769e96641c3a5054a7fe51edb64c1cdfd30
 
 .pswp__ui--one-slide .pswp__button--arrow--left, .pswp__ui--one-slide .pswp__button--arrow--right, .pswp__ui--one-slide .pswp__counter {
     display: none;

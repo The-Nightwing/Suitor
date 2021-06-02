@@ -195,6 +195,7 @@ The application manages data of various aspects of the firm, like details of law
 
 | **Variable** | **Datatype** | **Integrity Constraints** |
 | --- | --- | --- |
+
 | userID | char(10) | Not null, Foreign key, part of Primary key along with caseID, whentt |
 | caseID | char(15) | Not null, Foreign key, part of Primary key along with userID, whentt |
 | whentt | datetime | Not null, Foreign key, part of Primary key along with userID, caseID |
@@ -462,7 +463,7 @@ Following are the search key attributes for index tables of different tables bas
 
 **MAIN WEBSITE**
 
-<a href="https://suitor.cleverapps.io/" target="_blank"><img src="images/suitorimage.jpg"></a>
+<a href="https://suitor-webapp.herokuapp.com/managing_partner" target="_blank"><img src="images/suitorimage.jpg"></a>
 
 **WEBSITE BACKEND**
 
@@ -518,7 +519,7 @@ Following are the search key attributes for index tables of different tables bas
 **Sign in Page**
 ![](images/3.jpg)
 
-**One of the Stakeholder's Query Page**
+**One of the Stakeholders Query Page**
 ![](images/4.jpg)
 
 **Ouput format of Queries**

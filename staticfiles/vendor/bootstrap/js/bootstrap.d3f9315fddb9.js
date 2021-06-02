@@ -644,8 +644,8 @@ var Carousel = function ($) {
       }
     };
 
-    Carousel.prototype.nextWhenVisible = function nextWhenVisible() {
-      // Don't call next when the page isn't visible
+    Carousel.prototype.nextwhenttVisible = function nextwhenttVisible() {
+      // Don't call next whentt the page isn't visible
       if (!document.hidden) {
         this.next();
       }
@@ -682,7 +682,7 @@ var Carousel = function ($) {
       }
 
       if (this._config.interval && !this._isPaused) {
-        this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
+        this._interval = setInterval((document.visibilityState ? this.nextwhenttVisible : this.next).bind(this), this._config.interval);
       }
     };
 
