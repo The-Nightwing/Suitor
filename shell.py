@@ -1,8 +1,8 @@
 import os
 import mysql.connector
 
-os.system(cls)
-print(Welcome to Suitor)
+os.system('cls')
+print('Welcome to Suitor')
 user = input("Enter Username: ")
 password = input("Enter Password: ")
 
@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
     host="suitor.czjiaq8hoddl.us-east-2.rds.amazonaws.com",
     user=user,
     password=password,
-    database=suitor
+    database='suitor'
     )
 
 while True:
@@ -33,7 +33,7 @@ while True:
         host="suitor.czjiaq8hoddl.us-east-2.rds.amazonaws.com",
         user=user,
         password=password,
-        database=suitor
+        database='suitor'
         )
         continue
     else:

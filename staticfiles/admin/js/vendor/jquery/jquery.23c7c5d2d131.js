@@ -40,7 +40,7 @@
 } )( typeof window !== "undefined" ? window : this, function( window, noGlobal ) {
 
 // Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
-// throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
+// throw exceptions whentt non-strict code (e.g., ASP.NET 4.5) accesses strict mode
 // arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
 // enough that all such attempts are guarded in a try block.
 "use strict";
@@ -113,7 +113,7 @@ var document = window.document;
 				// Support: Firefox 64+, Edge 18+
 				// Some browsers don't support the "nonce" property on scripts.
 				// On the other hand, just using `getAttribute` is not enough as
-				// the `nonce` attribute is reset to an empty string whenever it
+				// the `nonce` attribute is reset to an empty string whenttever it
 				// becomes browsing-context connected.
 				// See https://github.com/whatwg/html/issues/2369
 				// See https://html.spec.whatwg.org/#nonce-attributes
@@ -266,7 +266,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 		i++;
 	}
 
-	// Handle case when target is a string or something (possible in deep copy)
+	// Handle case whentt target is a string or something (possible in deep copy)
 	if ( typeof target !== "object" && !isFunction( target ) ) {
 		target = {};
 	}
@@ -838,11 +838,11 @@ function Sizzle( selector, context, results, seed ) {
 				newSelector = selector;
 				newContext = context;
 
-				// qSA considers elements outside a scoping root when evaluating child or
+				// qSA considers elements outside a scoping root whentt evaluating child or
 				// descendant combinators, which is not what we want.
 				// In such cases, we work around the behavior by prefixing every selector in the
 				// list with an ID selector referencing the scope context.
-				// The technique has to be used as well when a leading combinator is used
+				// The technique has to be used as well whentt a leading combinator is used
 				// as such selectors are not recognized by querySelectorAll.
 				// Thanks to Andrew Dupont for this technique.
 				if ( nodeType === 1 &&
@@ -1112,7 +1112,7 @@ isXML = Sizzle.isXML = function( elem ) {
 		docElem = ( elem.ownerDocument || elem ).documentElement;
 
 	// Support: IE <=8
-	// Assume HTML when documentElement doesn't yet exist, such as inside loading iframes
+	// Assume HTML whentt documentElement doesn't yet exist, such as inside loading iframes
 	// https://bugs.jquery.com/ticket/4833
 	return !rhtml.test( namespace || docElem && docElem.nodeName || "HTML" );
 };
@@ -1128,7 +1128,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Return early if doc is invalid or already selected
 	// Support: IE 11+, Edge 17 - 18+
-	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 	// two documents; shallow comparisons work.
 	// eslint-disable-next-line eqeqeq
 	if ( doc == document || doc.nodeType !== 9 || !doc.documentElement ) {
@@ -1143,7 +1143,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Support: IE 9 - 11+, Edge 12 - 18+
 	// Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
 	// Support: IE 11+, Edge 17 - 18+
-	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 	// two documents; shallow comparisons work.
 	// eslint-disable-next-line eqeqeq
 	if ( preferredDoc != document &&
@@ -1302,12 +1302,12 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// QSA and matchesSelector support
 
-	// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
+	// matchesSelector(:active) reports false whentt true (IE9/Opera 11.5)
 	rbuggyMatches = [];
 
-	// qSa(:focus) reports false when true (Chrome 21)
+	// qSa(:focus) reports false whentt true (Chrome 21)
 	// We allow this because of a bug in IE8/9 that throws an error
-	// whenever `document.activeElement` is accessed on an iframe
+	// whenttever `document.activeElement` is accessed on an iframe
 	// So, we allow :focus to pass through QSA all the time to avoid the IE error
 	// See https://bugs.jquery.com/ticket/13378
 	rbuggyQSA = [];
@@ -1330,7 +1330,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				"<option selected=''></option></select>";
 
 			// Support: IE8, Opera 11-12.16
-			// Nothing should be selected when empty strings follow ^= or $= or *=
+			// Nothing should be selected whentt empty strings follow ^= or $= or *=
 			// The test attribute must be unknown in Opera but "safe" for WinRT
 			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( el.querySelectorAll( "[msallowcapture^='']" ).length ) {
@@ -1488,7 +1488,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// Calculate position if both inputs belong to the same document
 		// Support: IE 11+, Edge 17 - 18+
-		// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+		// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 		// two documents; shallow comparisons work.
 		// eslint-disable-next-line eqeqeq
 		compare = ( a.ownerDocument || a ) == ( b.ownerDocument || b ) ?
@@ -1503,7 +1503,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Choose the first element that is related to our preferred document
 			// Support: IE 11+, Edge 17 - 18+
-			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 			// two documents; shallow comparisons work.
 			// eslint-disable-next-line eqeqeq
 			if ( a == document || a.ownerDocument == preferredDoc &&
@@ -1512,7 +1512,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Support: IE 11+, Edge 17 - 18+
-			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 			// two documents; shallow comparisons work.
 			// eslint-disable-next-line eqeqeq
 			if ( b == document || b.ownerDocument == preferredDoc &&
@@ -1547,7 +1547,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		if ( !aup || !bup ) {
 
 			// Support: IE 11+, Edge 17 - 18+
-			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 			// two documents; shallow comparisons work.
 			/* eslint-disable eqeqeq */
 			return a == document ? -1 :
@@ -1586,7 +1586,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Otherwise nodes in our document sort first
 			// Support: IE 11+, Edge 17 - 18+
-			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 			// two documents; shallow comparisons work.
 			/* eslint-disable eqeqeq */
 			ap[ i ] == preferredDoc ? -1 :
@@ -1633,7 +1633,7 @@ Sizzle.contains = function( context, elem ) {
 
 	// Set document vars if needed
 	// Support: IE 11+, Edge 17 - 18+
-	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 	// two documents; shallow comparisons work.
 	// eslint-disable-next-line eqeqeq
 	if ( ( context.ownerDocument || context ) != document ) {
@@ -1646,7 +1646,7 @@ Sizzle.attr = function( elem, name ) {
 
 	// Set document vars if needed
 	// Support: IE 11+, Edge 17 - 18+
-	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 	// two documents; shallow comparisons work.
 	// eslint-disable-next-line eqeqeq
 	if ( ( elem.ownerDocument || elem ) != document ) {
@@ -1976,7 +1976,7 @@ Expr = Sizzle.selectors = {
 								// Fallback to seeking `elem` from the start
 								( diff = nodeIndex = 0 ) || start.pop() ) ) {
 
-								// When found, cache indexes on `parent` and break
+								// whentt found, cache indexes on `parent` and break
 								if ( node.nodeType === 1 && ++diff && node === elem ) {
 									uniqueCache[ type ] = [ dirruns, nodeIndex, diff ];
 									break;
@@ -2685,7 +2685,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			if ( outermost ) {
 
 				// Support: IE 11+, Edge 17 - 18+
-				// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+				// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 				// two documents; shallow comparisons work.
 				// eslint-disable-next-line eqeqeq
 				outermostContext = context == document || context || outermost;
@@ -2699,7 +2699,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 					j = 0;
 
 					// Support: IE 11+, Edge 17 - 18+
-					// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+					// IE/Edge sometimes throw a "Permission denied" error whentt strict-comparing
 					// two documents; shallow comparisons work.
 					// eslint-disable-next-line eqeqeq
 					if ( !context && elem.ownerDocument != document ) {
@@ -2954,7 +2954,7 @@ if ( !support.attributes || !assert( function( el ) {
 }
 
 // Support: IE<9
-// Use getAttributeNode to fetch booleans when getAttribute lies
+// Use getAttributeNode to fetch booleans whentt getAttribute lies
 if ( !assert( function( el ) {
 	return el.getAttribute( "disabled" ) == null;
 } ) ) {
@@ -3238,7 +3238,7 @@ rootjQuery = jQuery( document );
 
 var rparentsprev = /^(?:parents|prev(?:Until|All))/,
 
-	// Methods guaranteed to produce a unique set when starting from a unique set
+	// Methods guaranteed to produce a unique set whentt starting from a unique set
 	guaranteedUnique = {
 		children: true,
 		contents: true,
@@ -3447,7 +3447,7 @@ function createOptions( options ) {
  *
  *	unique:			will ensure a callback can only be added once (no duplicate in the list)
  *
- *	stopOnFalse:	interrupt callings when a callback returns false
+ *	stopOnFalse:	interrupt callings whentt a callback returns false
  *
  */
 jQuery.Callbacks = function( options ) {
@@ -3675,7 +3675,7 @@ function adoptValue( value, resolve, reject, noValue ) {
 		}
 
 	// For Promises/A+, convert exceptions into rejections
-	// Since jQuery.when doesn't unwrap thenables, we can skip the extra checks appearing in
+	// Since jQuery.whentt doesn't unwrap thenables, we can skip the extra checks appearing in
 	// Deferred#then to conditionally suppress rejection.
 	} catch ( value ) {
 
@@ -3861,7 +3861,7 @@ jQuery.extend( {
 							} else {
 
 								// Call an optional hook to record the stack, in case of exception
-								// since it's otherwise lost when execution goes async
+								// since it's otherwise lost whentt execution goes async
 								if ( jQuery.Deferred.getStackHook ) {
 									process.stackTrace = jQuery.Deferred.getStackHook();
 								}
@@ -3984,7 +3984,7 @@ jQuery.extend( {
 	},
 
 	// Deferred helper
-	when: function( singleValue ) {
+	whentt: function( singleValue ) {
 		var
 
 			// count of uncompleted subordinates
@@ -4041,7 +4041,7 @@ var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
 jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 	// Support: IE 8 - 9 only
-	// Console exists when dev tools are open, which can happen at any time
+	// Console exists whentt dev tools are open, which can happen at any time
 	if ( window.console && window.console.warn && error && rerrorNames.test( error.name ) ) {
 		window.console.warn( "jQuery.Deferred exception: " + error.message, error.stack, stack );
 	}
@@ -4086,7 +4086,7 @@ jQuery.extend( {
 	// the ready event fires. See #6781
 	readyWait: 1,
 
-	// Handle when the DOM is ready
+	// Handle whentt the DOM is ready
 	ready: function( wait ) {
 
 		// Abort if there are pending holds or we're already ready
@@ -4167,7 +4167,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 				fn.call( elems, value );
 				fn = null;
 
-			// ...except when executing function values
+			// ...except whentt executing function values
 			} else {
 				bulk = fn;
 				fn = function( elem, _key, value ) {
@@ -4258,7 +4258,7 @@ Data.prototype = {
 
 				// Otherwise secure it in a non-enumerable property
 				// configurable must be true to allow the property to be
-				// deleted when data is removed
+				// deleted whentt data is removed
 				} else {
 					Object.defineProperty( owner, this.expando, {
 						value: value,
@@ -4315,7 +4315,7 @@ Data.prototype = {
 			return this.get( owner, key );
 		}
 
-		// When the key is not a string, or both a key and value
+		// whentt the key is not a string, or both a key and value
 		// are specified, set or extend (existing objects) with either:
 		//
 		//   1. An object of properties
@@ -4364,7 +4364,7 @@ Data.prototype = {
 		if ( key === undefined || jQuery.isEmptyObject( cache ) ) {
 
 			// Support: Chrome <=35 - 45
-			// Webkit & Blink performance suffers when deleting properties
+			// Webkit & Blink performance suffers whentt deleting properties
 			// from DOM nodes, so set to undefined instead
 			// https://bugs.chromium.org/p/chromium/issues/detail?id=378607 (bug restricted)
 			if ( owner.nodeType ) {
@@ -4656,7 +4656,7 @@ jQuery.fn.extend( {
 		return this.queue( type || "fx", [] );
 	},
 
-	// Get a promise resolved when queues of a certain type
+	// Get a promise resolved whentt queues of a certain type
 	// are emptied (fx is the type by default)
 	promise: function( type, obj ) {
 		var tmp,
@@ -4704,7 +4704,7 @@ var documentElement = document.documentElement;
 		composed = { composed: true };
 
 	// Support: IE 9 - 11+, Edge 12 - 18+, iOS 10.0 - 10.2 only
-	// Check attachment across shadow DOM boundaries when possible (gh-3504)
+	// Check attachment across shadow DOM boundaries whentt possible (gh-3504)
 	// Support: iOS 10.0-10.2 only
 	// Early iOS 10 versions support `attachShadow` but not `getRootNode`,
 	// leading to errors. We need to check for `getRootNode`.
@@ -4928,7 +4928,7 @@ var rscriptType = ( /^$|^module$|\/(?:java|ecma)script/i );
 	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
 
 	// Support: IE <=9 only
-	// IE <=9 replaces <option> tags with their contents when inserted outside of
+	// IE <=9 replaces <option> tags with their contents whentt inserted outside of
 	// the select element.
 	div.innerHTML = "<option></option>";
 	support.option = !!div.lastChild;
@@ -5103,11 +5103,11 @@ function returnFalse() {
 }
 
 // Support: IE <=9 - 11+
-// focus() and blur() are asynchronous, except when they are no-op.
-// So expect focus to be synchronous when the element is already active,
-// and blur to be synchronous when the element is not already active.
+// focus() and blur() are asynchronous, except whentt they are no-op.
+// So expect focus to be synchronous whentt the element is already active,
+// and blur to be synchronous whentt the element is not already active.
 // (focus and blur are always synchronous in other supported browsers,
-// this just defines when we can count on it).
+// this just defines whentt we can count on it).
 function expectSync( elem, type ) {
 	return ( elem === safeActiveElement() ) === ( type === "focus" );
 }
@@ -5228,7 +5228,7 @@ jQuery.event = {
 			eventHandle = elemData.handle = function( e ) {
 
 				// Discard the second event of a jQuery.event.trigger() and
-				// when an event is called after a page has unloaded
+				// whentt an event is called after a page has unloaded
 				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
 					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
 			};
@@ -5634,7 +5634,7 @@ function leverageNative( el, type, expectSync ) {
 				// from an async native handler (gh-4350)
 				if ( !saved.length ) {
 
-					// Store arguments for use when handling the inner native event
+					// Store arguments for use whentt handling the inner native event
 					// There will always be at least one argument (an event object), so this array
 					// will not be confused with a leftover capture object.
 					saved = slice.call( arguments );
@@ -6038,7 +6038,7 @@ function fixInput( src, dest ) {
 	if ( nodeName === "input" && rcheckableType.test( src.type ) ) {
 		dest.checked = src.checked;
 
-	// Fails to return the selected option to the default selected state when cloning options
+	// Fails to return the selected option to the default selected state whentt cloning options
 	} else if ( nodeName === "input" || nodeName === "textarea" ) {
 		dest.defaultValue = src.defaultValue;
 	}
@@ -6483,7 +6483,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		// Support: IE 9 only
 		// Detect overflow:scroll screwiness (gh-3699)
 		// Support: Chrome <=64
-		// Don't get tricked when zoom affects offsetWidth (gh-4029)
+		// Don't get tricked whentt zoom affects offsetWidth (gh-4029)
 		div.style.position = "absolute";
 		scrollboxSizeVal = roundPixelMeasures( div.offsetWidth / 3 ) === 12;
 
@@ -6694,7 +6694,7 @@ function setPositiveNumber( _elem, value, subtract ) {
 	var matches = rcssNum.exec( value );
 	return matches ?
 
-		// Guard against undefined "subtract", e.g., when used as in cssHooks
+		// Guard against undefined "subtract", e.g., whentt used as in cssHooks
 		Math.max( 0, matches[ 2 ] - ( subtract || 0 ) ) + ( matches[ 3 ] || "px" ) :
 		value;
 }
@@ -6747,7 +6747,7 @@ function boxModelAdjustment( elem, dimension, box, isBorderBox, styles, computed
 		}
 	}
 
-	// Account for positive content-box scroll gutter when requested by providing computedVal
+	// Account for positive content-box scroll gutter whentt requested by providing computedVal
 	if ( !isBorderBox && computedVal >= 0 ) {
 
 		// offsetWidth/offsetHeight is a rounded sum of content, padding, scroll gutter, and border
@@ -6793,7 +6793,7 @@ function getWidthOrHeight( elem, dimension, extra ) {
 
 
 	// Support: IE 9 - 11 only
-	// Use offsetWidth/offsetHeight for when box sizing is unreliable.
+	// Use offsetWidth/offsetHeight for whentt box sizing is unreliable.
 	// In those cases, the computed value can be trusted to be border-box.
 	if ( ( !support.boxSizingReliable() && isBorderBox ||
 
@@ -6803,7 +6803,7 @@ function getWidthOrHeight( elem, dimension, extra ) {
 		// Interestingly, in some cases IE 9 doesn't suffer from this issue.
 		!support.reliableTrDimensions() && nodeName( elem, "tr" ) ||
 
-		// Fall back to offsetWidth/offsetHeight when value is "auto"
+		// Fall back to offsetWidth/offsetHeight whentt value is "auto"
 		// This happens for inline elements with no explicit setting (gh-3571)
 		val === "auto" ||
 
@@ -6930,7 +6930,7 @@ jQuery.extend( {
 			}
 
 			// If a number was passed in, add the unit (except for certain CSS properties)
-			// The isCustomProp check can be removed in jQuery 4.0 when we only auto-append
+			// The isCustomProp check can be removed in jQuery 4.0 whentt we only auto-append
 			// "px" to a few hardcoded values.
 			if ( type === "number" && !isCustomProp ) {
 				value += ret && ret[ 3 ] || ( jQuery.cssNumber[ origName ] ? "" : "px" );
@@ -7199,8 +7199,8 @@ Tween.propHooks = {
 		get: function( tween ) {
 			var result;
 
-			// Use a property on the element directly when it is not a DOM element,
-			// or when there is no matching style property that exists.
+			// Use a property on the element directly whentt it is not a DOM element,
+			// or whentt there is no matching style property that exists.
 			if ( tween.elem.nodeType !== 1 ||
 				tween.elem[ tween.prop ] != null && tween.elem.style[ tween.prop ] == null ) {
 				return tween.elem[ tween.prop ];
@@ -7606,7 +7606,7 @@ function Animation( elem, properties, options ) {
 					animation.tweens[ index ].run( 1 );
 				}
 
-				// Resolve when we played the last frame; otherwise, reject
+				// Resolve whentt we played the last frame; otherwise, reject
 				if ( gotoEnd ) {
 					deferred.notifyWith( elem, [ animation, 1, 0 ] );
 					deferred.resolveWith( elem, [ animation, gotoEnd ] );
@@ -7896,7 +7896,7 @@ jQuery.fx.tick = function() {
 	for ( ; i < timers.length; i++ ) {
 		timer = timers[ i ];
 
-		// Run the timer and safely remove it when done (allowing for external removal)
+		// Run the timer and safely remove it whentt done (allowing for external removal)
 		if ( !timer() && timers[ i ] === timer ) {
 			timers.splice( i--, 1 );
 		}
@@ -8000,7 +8000,7 @@ jQuery.extend( {
 			return;
 		}
 
-		// Fallback to prop when attributes are not supported
+		// Fallback to prop whentt attributes are not supported
 		if ( typeof elem.getAttribute === "undefined" ) {
 			return jQuery.prop( elem, name, value );
 		}
@@ -8074,7 +8074,7 @@ boolHook = {
 	set: function( elem, value, name ) {
 		if ( value === false ) {
 
-			// Remove boolean attributes when set to false
+			// Remove boolean attributes whentt set to false
 			jQuery.removeAttr( elem, name );
 		} else {
 			elem.setAttribute( name, name );
@@ -8161,7 +8161,7 @@ jQuery.extend( {
 
 				// Support: IE <=9 - 11 only
 				// elem.tabIndex doesn't always return the
-				// correct value when it hasn't been explicitly set
+				// correct value whentt it hasn't been explicitly set
 				// https://web.archive.org/web/20141116233347/http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
 				// Use proper attribute retrieval(#12072)
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
@@ -8194,7 +8194,7 @@ jQuery.extend( {
 // forces the browser to respect setting selected
 // on the option
 // The getter ensures a default option is selected
-// when in an optgroup
+// whentt in an optgroup
 // eslint rule "no-unused-expressions" is disabled for this code
 // since it considers such accessions noop
 if ( !support.optSelected ) {
@@ -8580,7 +8580,7 @@ jQuery.extend( {
 					/* eslint-enable no-cond-assign */
 				}
 
-				// Force browsers to behave consistently when non-matching value is set
+				// Force browsers to behave consistently whentt non-matching value is set
 				if ( !optionSet ) {
 					elem.selectedIndex = -1;
 				}
@@ -8737,7 +8737,7 @@ jQuery.extend( jQuery.event, {
 				// Don't do default actions on window, that's where global variables be (#6170)
 				if ( ontype && isFunction( elem[ type ] ) && !isWindow( elem ) ) {
 
-					// Don't re-trigger an onFOO event when we call its FOO() method
+					// Don't re-trigger an onFOO event whentt we call its FOO() method
 					tmp = elem[ ontype ];
 
 					if ( tmp ) {
@@ -9342,7 +9342,7 @@ jQuery.extend( {
 
 		// For options that shouldn't be deep extended:
 		// you can add your own custom options here if
-		// and when you create one that shouldn't be
+		// and whentt you create one that shouldn't be
 		// deep extended (see ajaxExtend)
 		flatOptions: {
 			url: true,
@@ -9520,7 +9520,7 @@ jQuery.extend( {
 		// Extract dataTypes list
 		s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnothtmlwhite ) || [ "" ];
 
-		// A cross-domain request is in order when the origin doesn't match the current origin.
+		// A cross-domain request is in order whentt the origin doesn't match the current origin.
 		if ( s.crossDomain == null ) {
 			urlAnchor = document.createElement( "a" );
 
@@ -9531,7 +9531,7 @@ jQuery.extend( {
 				urlAnchor.href = s.url;
 
 				// Support: IE <=8 - 11 only
-				// Anchor's host property isn't correctly set when s.url is relative
+				// Anchor's host property isn't correctly set whentt s.url is relative
 				urlAnchor.href = urlAnchor.href;
 				s.crossDomain = originAnchor.protocol + "//" + originAnchor.host !==
 					urlAnchor.protocol + "//" + urlAnchor.host;
@@ -9692,7 +9692,7 @@ jQuery.extend( {
 			}
 		}
 
-		// Callback for when everything is done
+		// Callback for whentt everything is done
 		function done( status, nativeStatusText, responses, headers ) {
 			var isSuccess, success, error, response, modified,
 				statusText = nativeStatusText;
@@ -9966,7 +9966,7 @@ var xhrSuccessStatus = {
 		0: 200,
 
 		// Support: IE <=9 only
-		// #1450: sometimes IE returns 1223 when it should be 204
+		// #1450: sometimes IE returns 1223 whentt it should be 204
 		1223: 204
 	},
 	xhrSupported = jQuery.ajaxSettings.xhr();
@@ -10118,7 +10118,7 @@ jQuery.ajaxTransport( function( options ) {
 
 
 
-// Prevent auto-execution of scripts when no explicit dataType was provided (See gh-2432)
+// Prevent auto-execution of scripts whentt no explicit dataType was provided (See gh-2432)
 jQuery.ajaxPrefilter( function( s ) {
 	if ( s.crossDomain ) {
 		s.contents.script = false;
@@ -10536,7 +10536,7 @@ jQuery.fn.extend( {
 			offset = this.offset();
 
 			// Account for the *real* offset parent, which can be the document or its root element
-			// when a statically positioned element is identified
+			// whentt a statically positioned element is identified
 			doc = elem.ownerDocument;
 			offsetParent = elem.offsetParent || doc.documentElement;
 			while ( offsetParent &&
@@ -10620,7 +10620,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 // Add the top/left cssHooks using jQuery.fn.position
 // Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
 // Blink bug: https://bugs.chromium.org/p/chromium/issues/detail?id=589347
-// getComputedStyle returns percent when specified for top/left/bottom/right;
+// getComputedStyle returns percent whentt specified for top/left/bottom/right;
 // rather than make the css module depend on the offset module, just check for it here
 jQuery.each( [ "top", "left" ], function( _i, prop ) {
 	jQuery.cssHooks[ prop ] = addGetHookIf( support.pixelPosition,

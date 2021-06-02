@@ -1792,7 +1792,7 @@
             minutes * 6e4 + // 1000 * 60
             hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
         // Because of dateAddRemove treats 24 hours as different from a
-        // day when working around DST, we need to store them separately
+        // day whentt working around DST, we need to store them separately
         this._days = +days +
             weeks * 7;
         // It is impossible translate months into days without knowing
@@ -1878,7 +1878,7 @@
 
     // HOOKS
 
-    // This function will be called whenever a moment is mutated.
+    // This function will be called whenttever a moment is mutated.
     // It is intended to keep the offset in sync with the timezone.
     utils_hooks__hooks.updateOffset = function () {};
 
@@ -2330,7 +2330,7 @@
         var m = this.clone().utc();
         if (0 < m.year() && m.year() <= 9999) {
             if (isFunction(Date.prototype.toISOString)) {
-                // native implementation is ~50x faster, use it when we can
+                // native implementation is ~50x faster, use it whentt we can
                 return this.toDate().toISOString();
             } else {
                 return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');

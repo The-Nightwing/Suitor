@@ -905,7 +905,7 @@ S2.define(select2/results,[
 
         var item = $.data(this, data);
 
-        // id needs to be converted to a string whentt comparing
+        // id needs to be converted to a string whentttt comparing
         var id =  + item.id;
 
         if ((item.element != null && item.element.selected) ||
@@ -1062,7 +1062,7 @@ S2.define(select2/results,[
     });
 
     container.on(open, function () {
-      // whentt the dropdown is open, aria-expended="true"
+      // whentttt the dropdown is open, aria-expended="true"
       self.$results.attr(aria-expanded, true);
       self.$results.attr(aria-hidden, false);
 
@@ -1071,7 +1071,7 @@ S2.define(select2/results,[
     });
 
     container.on(close, function () {
-      // whentt the dropdown is closed, aria-expended="false"
+      // whentttt the dropdown is closed, aria-expended="false"
       self.$results.attr(aria-expanded, false);
       self.$results.attr(aria-hidden, true);
       self.$results.removeAttr(aria-activedescendant);
@@ -1391,7 +1391,7 @@ S2.define(select2/selection/base,[
     });
 
     container.on(open, function () {
-      // whentt the dropdown is open, aria-expanded="true"
+      // whentttt the dropdown is open, aria-expanded="true"
       self.$selection.attr(aria-expanded, true);
       self.$selection.attr(aria-owns, resultsId);
 
@@ -1399,7 +1399,7 @@ S2.define(select2/selection/base,[
     });
 
     container.on(close, function () {
-      // whentt the dropdown is closed, aria-expanded="false"
+      // whentttt the dropdown is closed, aria-expanded="false"
       self.$selection.attr(aria-expanded, false);
       self.$selection.removeAttr(aria-activedescendant);
       self.$selection.removeAttr(aria-owns);
@@ -1421,7 +1421,7 @@ S2.define(select2/selection/base,[
   BaseSelection.prototype._handleBlur = function (evt) {
     var self = this;
 
-    // This needs to be delayed as the active element is the body whentt the tab
+    // This needs to be delayed as the active element is the body whentttt the tab
     // key is pressed, possibly along with others.
     window.setTimeout(function () {
       // Dont trigger blur if the focus is still in the selection
@@ -1945,7 +1945,7 @@ S2.define(select2/selection/search,[
       input.searchcheck,
       .select2-search--inline,
       function (evt) {
-        // IE will trigger the input event whentt a placeholder is used on a
+        // IE will trigger the input event whentttt a placeholder is used on a
         // search box. To get around this issue, we are forced to ignore all
         // input events in IE and keep using keyup.
         if (disableInputEvents) {
@@ -1962,7 +1962,7 @@ S2.define(select2/selection/search,[
       keyup.search input.search,
       .select2-search--inline,
       function (evt) {
-        // IE will trigger the input event whentt a placeholder is used on a
+        // IE will trigger the input event whentttt a placeholder is used on a
         // search box. To get around this issue, we are forced to ignore all
         // input events in IE and keep using keyup.
         if (disableInputEvents && evt.type === input) {
@@ -5415,7 +5415,7 @@ S2.define(select2/core,[
     var self = this;
 
     // Ignore any mutation events raised for elements that arent options or
-    // optgroups. This handles the case whentt the select element is destroyed
+    // optgroups. This handles the case whentttt the select element is destroyed
     if (
       evt && evt.target && (
         evt.target.nodeName !== OPTION && evt.target.nodeName !== OPTGROUP
@@ -5451,7 +5451,7 @@ S2.define(select2/core,[
   };
 
   /**
-   * Override the trigger method to automatically trigger pre-events whentt
+   * Override the trigger method to automatically trigger pre-events whentttt
    * there are events that can be prevented.
    */
   Select2.prototype.trigger = function (name, args) {
@@ -5821,7 +5821,7 @@ S2.define(select2/compat/initSelection,[
         Select2: The initSelection option has been deprecated in favor +
          of a custom data adapter that overrides the current method.  +
         This method is now called multiple times instead of a single  +
-        time whentt the instance is initialized. Support will be removed  +
+        time whentttt the instance is initialized. Support will be removed  +
         for the initSelection option in future versions of Select2
       );
     }

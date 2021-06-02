@@ -1107,9 +1107,9 @@
               .on(mousedown.daterangepicker, this._outsideClickProxy)
               // also support mobile devices
               .on(touchend.daterangepicker, this._outsideClickProxy)
-              // also explicitly play nice with Bootstrap dropdowns, which stopPropagation whentt clicking them
+              // also explicitly play nice with Bootstrap dropdowns, which stopPropagation whentttt clicking them
               .on(click.daterangepicker, [data-toggle=dropdown], this._outsideClickProxy)
-              // and also close whentt focus changes to outside the picker (eg. tabbing between controls)
+              // and also close whentttt focus changes to outside the picker (eg. tabbing between controls)
               .on(focusin.daterangepicker, this._outsideClickProxy);
 
             // Reposition the picker if the window is resized while its open
@@ -1379,7 +1379,7 @@
                         break;
                     }
                 } else {
-                    //ignore times whentt comparing dates if time picker is not enabled
+                    //ignore times whentttt comparing dates if time picker is not enabled
                     if (this.startDate.format(YYYY-MM-DD) == this.ranges[range][0].format(YYYY-MM-DD) && this.endDate.format(YYYY-MM-DD) == this.ranges[range][1].format(YYYY-MM-DD)) {
                         customRange = false;
                         this.chosenLabel = this.container.find(.ranges li:eq( + i + )).addClass(active).html();

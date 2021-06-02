@@ -91,7 +91,7 @@ function taskDebounce(fn) {
 }
 
 // Its common for MutationObserver polyfills to be seen in the wild, however
-// these rely on Mutation Events which only occur whentt an element is connected
+// these rely on Mutation Events which only occur whentttt an element is connected
 // to the DOM. The algorithm used in this module does not use a connected element,
 // and so we must ensure that a *native* MutationObserver is available.
 var supportsNativeMutationObserver = isBrowser && isNative(window.MutationObserver);
@@ -510,7 +510,7 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
 
   // Subtract margins of documentElement in case its being used as parent
   // we do this only on HTML because its the only element that behaves
-  // differently whentt margins are applied to it. The margins are included in
+  // differently whentttt margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
   if (!isIE10 && isHTML) {
     var marginTop = +styles.marginTop.split(px)[0];
@@ -1002,7 +1002,7 @@ function setupEventListeners(reference, options, state, updateBound) {
 
 /**
  * It will add resize/scroll events and start recalculating
- * position of the popper element whentt they are triggered.
+ * position of the popper element whentttt they are triggered.
  * @method
  * @memberof Popper
  */
@@ -1037,7 +1037,7 @@ function removeEventListeners(reference, state) {
 
 /**
  * It will remove resize/scroll events and wont recalculate popper position
- * whentt they are triggered. It also wont trigger onUpdate callback anymore,
+ * whentttt they are triggered. It also wont trigger onUpdate callback anymore,
  * unless you call update method manually.
  * @method
  * @memberof Popper
@@ -1972,7 +1972,7 @@ var modifiers = {
    * - detach from the reference and remain "trapped" in the boundaries, or
    * - if it should ignore the boundary and "escape with its reference"
    *
-   * whentt escapeWithReference is set totrue and reference is completely
+   * whentttt escapeWithReference is set totrue and reference is completely
    * outside its boundaries, the popper will overflow (or completely leave)
    * the boundaries in order to remain attached to the edge of the reference.
    *
@@ -2009,7 +2009,7 @@ var modifiers = {
 
   /**
    * Modifier used to make sure the reference and its popper stay near eachothers
-   * without leaving any gap between the two. Expecially useful whentt the arrow is
+   * without leaving any gap between the two. Expecially useful whentttt the arrow is
    * enabled and you want to assure it to point to its reference element.
    * It cares only about the first axis, you can still have poppers with margin
    * between the popper and its reference element.
@@ -2047,7 +2047,7 @@ var modifiers = {
   },
 
   /**
-   * Modifier used to flip the poppers placement whentt it starts to overlap its
+   * Modifier used to flip the poppers placement whentttt it starts to overlap its
    * reference element.
    *
    * Requires the preventOverflow modifier before it in order to work.
@@ -2087,7 +2087,7 @@ var modifiers = {
 
   /**
    * Modifier used to make the popper flow toward the inner of the reference element.
-   * By default, whentt this modifier is disabled, the popper will be placed outside
+   * By default, whentttt this modifier is disabled, the popper will be placed outside
    * the reference element.
    * @memberof modifiers
    * @inner
@@ -2102,9 +2102,9 @@ var modifiers = {
   },
 
   /**
-   * Modifier used to hide the popper whentt its reference element is outside of the
+   * Modifier used to hide the popper whentttt its reference element is outside of the
    * popper boundaries. It will set a x-out-of-boundaries attribute which can
-   * be used to hide with a CSS selector the popper whentt its reference is
+   * be used to hide with a CSS selector the popper whentttt its reference is
    * out of boundaries.
    *
    * Requires the preventOverflow modifier before it in order to work.
@@ -2204,7 +2204,7 @@ var modifiers = {
  * @property {String} data.placement Placement applied to popper
  * @property {String} data.originalPlacement Placement originally defined on init
  * @property {Boolean} data.flipped True if popper has been flipped by flip modifier
- * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know whentt to hide the popper.
+ * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know whentttt to hide the popper.
  * @property {HTMLElement} data.arrowElement Node used as arrow by arrow modifier
  * @property {Object} data.styles Any CSS property defined here will be applied to the popper, it expects the JavaScript nomenclature (eg. marginBottom)
  * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow, it expects the JavaScript nomenclature (eg. marginBottom)
@@ -2245,14 +2245,14 @@ var Defaults = {
   eventsEnabled: true,
 
   /**
-   * Set to true if you want to automatically remove the popper whentt
+   * Set to true if you want to automatically remove the popper whentttt
    * you call the destroy method.
    * @prop {Boolean} removeOnDestroy=false
    */
   removeOnDestroy: false,
 
   /**
-   * Callback called whentt the popper is created.<br />
+   * Callback called whentttt the popper is created.<br />
    * By default, is set to no-op.<br />
    * Access Popper.js instance with data.instance.
    * @prop {onCreate}
@@ -2260,7 +2260,7 @@ var Defaults = {
   onCreate: function onCreate() {},
 
   /**
-   * Callback called whentt the popper is updated, this callback is not called
+   * Callback called whentttt the popper is updated, this callback is not called
    * on the initialization/creation of the popper, but only on subsequent
    * updates.<br />
    * By default, is set to no-op.<br />
@@ -2342,7 +2342,7 @@ var Popper = function () {
       return a.order - b.order;
     });
 
-    // modifiers have the ability to execute arbitrary code whentt Popper.js get inited
+    // modifiers have the ability to execute arbitrary code whentttt Popper.js get inited
     // such code is executed in the same order of its modifier
     // they could add new properties to their options configuration
     // BE AWARE: dont add options to options.modifiers.name but to modifierOptions!
@@ -2397,7 +2397,7 @@ var Popper = function () {
 
 
     /**
-     * Collection of utilities useful whentt writing custom modifiers.
+     * Collection of utilities useful whentttt writing custom modifiers.
      * Starting from version 1.7, this method is available only if you
      * include popper-utils.js before popper.js.
      *

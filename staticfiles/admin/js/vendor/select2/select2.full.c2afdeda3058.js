@@ -113,8 +113,8 @@ var requirejs, require, define;
                     i -= 1;
                 } else if (part === '..') {
                     // If at the start, or previous value is still ..,
-                    // keep them so that when converted to a path it may
-                    // still work when converted to a path, even though
+                    // keep them so that whentt converted to a path it may
+                    // still work whentt converted to a path, even though
                     // as an ID it is less than ideal. In larger point
                     // releases, may be better to just kick out an error.
                     if (i === 0 || (i === 1 && name[2] === '..') || name[i - 1] === '..') {
@@ -973,7 +973,7 @@ S2.define('select2/results',[
 
         var item = Utils.GetData(this, 'data');
 
-        // id needs to be converted to a string when comparing
+        // id needs to be converted to a string whentt comparing
         var id = '' + item.id;
 
         if ((item.element != null && item.element.selected) ||
@@ -1141,7 +1141,7 @@ S2.define('select2/results',[
     });
 
     container.on('open', function () {
-      // When the dropdown is open, aria-expended="true"
+      // whentt the dropdown is open, aria-expended="true"
       self.$results.attr('aria-expanded', 'true');
       self.$results.attr('aria-hidden', 'false');
 
@@ -1150,7 +1150,7 @@ S2.define('select2/results',[
     });
 
     container.on('close', function () {
-      // When the dropdown is closed, aria-expended="false"
+      // whentt the dropdown is closed, aria-expended="false"
       self.$results.attr('aria-expanded', 'false');
       self.$results.attr('aria-hidden', 'true');
       self.$results.removeAttr('aria-activedescendant');
@@ -1471,7 +1471,7 @@ S2.define('select2/selection/base',[
     });
 
     container.on('open', function () {
-      // When the dropdown is open, aria-expanded="true"
+      // whentt the dropdown is open, aria-expanded="true"
       self.$selection.attr('aria-expanded', 'true');
       self.$selection.attr('aria-owns', resultsId);
 
@@ -1479,7 +1479,7 @@ S2.define('select2/selection/base',[
     });
 
     container.on('close', function () {
-      // When the dropdown is closed, aria-expanded="false"
+      // whentt the dropdown is closed, aria-expanded="false"
       self.$selection.attr('aria-expanded', 'false');
       self.$selection.removeAttr('aria-activedescendant');
       self.$selection.removeAttr('aria-owns');
@@ -1503,7 +1503,7 @@ S2.define('select2/selection/base',[
   BaseSelection.prototype._handleBlur = function (evt) {
     var self = this;
 
-    // This needs to be delayed as the active element is the body when the tab
+    // This needs to be delayed as the active element is the body whentt the tab
     // key is pressed, possibly along with others.
     window.setTimeout(function () {
       // Don't trigger `blur` if the focus is still in the selection
@@ -2090,7 +2090,7 @@ S2.define('select2/selection/search',[
       'input.searchcheck',
       '.select2-search--inline',
       function (evt) {
-        // IE will trigger the `input` event when a placeholder is used on a
+        // IE will trigger the `input` event whentt a placeholder is used on a
         // search box. To get around this issue, we are forced to ignore all
         // `input` events in IE and keep using `keyup`.
         if (disableInputEvents) {
@@ -2107,7 +2107,7 @@ S2.define('select2/selection/search',[
       'keyup.search input.search',
       '.select2-search--inline',
       function (evt) {
-        // IE will trigger the `input` event when a placeholder is used on a
+        // IE will trigger the `input` event whentt a placeholder is used on a
         // search box. To get around this issue, we are forced to ignore all
         // `input` events in IE and keep using `keyup`.
         if (disableInputEvents && evt.type === 'input') {
@@ -5739,7 +5739,7 @@ S2.define('select2/core',[
     var self = this;
 
     // Ignore any mutation events raised for elements that aren't options or
-    // optgroups. This handles the case when the select element is destroyed
+    // optgroups. This handles the case whentt the select element is destroyed
     if (
       evt && evt.target && (
         evt.target.nodeName !== 'OPTION' && evt.target.nodeName !== 'OPTGROUP'
@@ -5790,7 +5790,7 @@ S2.define('select2/core',[
   };
 
   /**
-   * Override the trigger method to automatically trigger pre-events when
+   * Override the trigger method to automatically trigger pre-events whentt
    * there are events that can be prevented.
    */
   Select2.prototype.trigger = function (name, args) {
@@ -6188,7 +6188,7 @@ S2.define('select2/compat/initSelection',[
         'Select2: The `initSelection` option has been deprecated in favor' +
         ' of a custom data adapter that overrides the `current` method. ' +
         'This method is now called multiple times instead of a single ' +
-        'time when the instance is initialized. Support will be removed ' +
+        'time whentt the instance is initialized. Support will be removed ' +
         'for the `initSelection` option in future versions of Select2'
       );
     }

@@ -10,49 +10,49 @@ from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 
 def index(request):
-    return render(request,main/index.html,{})
+    return render(request,'main/index.html',{})
 
 def login(request):
-    return render(request,main/login.html,{})
+    return render(request,'main/login.html',{})
 
 def loginaccess(request):
    
-    if request.POST[username][0]==I:
-        writeinfile(request.POST[username].strip())
-        if user_data[request.POST[username].strip()]==request.POST[password].strip():
-            return render(request, main/customer.html,{})
+    if request.POST['username'][0]=='I':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            return render(request, 'main/customer.html',{})
 
-    if request.POST[username][0]==Y:
-        writeinfile(request.POST[username].strip())
-        if user_data[request.POST[username].strip()]==request.POST[password].strip():
-            return render(request, main/customer_client_company.html,{})
+    if request.POST['username'][0]=='Y':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            return render(request, 'main/customer_client_company.html',{})
     
     
-    elif request.POST[username][0]==A:
-        writeinfile(request.POST[username].strip())
-        if user_data[request.POST[username].strip()]==request.POST[password].strip():
+    elif request.POST['username'][0]=='A':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
             with connection.cursor() as cursor:
-                query="select positionAtFirm from Lawyer where userID={}"
+                query="select positionAtFirm from Lawyer where userID='{}'"
                 query = query.format(readfile())
                 cursor.execute(query)
                 data = cursor.fetchall()
             print(data)
-            if data[0][0]==Paralegal:
-                return render(request,main/paralegal.html,{})
+            if data[0][0]=='Paralegal':
+                return render(request,'main/paralegal.html',{})
             else:
-                return render(request, main/Lawyer.html,{})
+                return render(request, 'main/Lawyer.html',{})
 
-    elif request.POST[username][0]==O:
-        writeinfile(request.POST[username].strip())
-        if user_data[request.POST[username].strip()]==request.POST[password].strip():
-            return render(request, main/other_staff.html,{})
+    elif request.POST['username'][0]=='O':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            return render(request, 'main/other_staff.html',{})
 
-    elif request.POST[username]==Harvey:
-        writeinfile(request.POST[username].strip())
-        if user_data[request.POST[username].strip()]==request.POST[password].strip():
-            return render(request,main/managing_partner.html,{})
+    elif request.POST['username']=='Harvey':
+        writeinfile(request.POST['username'].strip())
+        if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
+            return render(request,'main/managing_partner.html',{})
 
-    return render(request,main/user1.html,{})
+    return render(request,'main/user1.html',{})
 
 def paralegal(request):
     
@@ -69,25 +69,25 @@ def paralegal(request):
             data = cursor.fetchall()
             print(data)
         context={}
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,gender,charges,casesWon,casesLost,casesSettled,experience,emailID,phoneNumber,positionAtFirm,avgTimePerCase,streetName,city,pincode,state,specialization,clientRating]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','charges','casesWon','casesLost','casesSettled','experience','emailID','phoneNumber','positionAtFirm','avgTimePerCase','streetName','city','pincode','state','specialization','clientRating']
 
         obj = getdf(context, columns, data)
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
     #query2
     elif request.POST.get("q2"):
         context = {}
         with connection.cursor() as cursor:
-            query = "create or replace VIEW myEvents AS select * from Calendar where userID = {};"
+            query = "create or replace VIEW myEvents AS select * from Calendar where userID = '{}';"
             query = query.format(readfile())
         
             cursor.execute(query)
             cursor.execute("select * from myEvents;")
             data = cursor.fetchall()
-        columns=[userID,whentt,description]
+        columns=['userID','whentt','description']
 
         obj = getdf(context, columns, data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q3"):
         context = {}
@@ -100,11 +100,11 @@ def paralegal(request):
             cursor.execute("select * from allCases;")
             data = cursor.fetchall()
 
-        columns = [caseID, plaintiff, lastDateOfActivity, flair, dateOfFiling, duration, status, userID]
+        columns = ['caseID', 'plaintiff', 'lastDateOfActivity', 'flair', 'dateOfFiling', 'duration', 'status', 'userID']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q4"):
         context = {}
@@ -116,14 +116,14 @@ def paralegal(request):
             cursor.execute("select * from allLegalDocs;")
             data = cursor.fetchall()
 
-        columns = [docID, createdOn, dateLastModified, type, caseID, lastDateofActivity, flair, status,plaintiff]
+        columns = ['docID', 'createdOn', 'dateLastModified', 'type', 'caseID', 'lastDateofActivity', 'flair', 'status','plaintiff']
 
         obj = getdf(context, columns, data)
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q5"):
-        return render(request,main/meeting_form.html,{})
-    return render(request,main/user1.html,{})
+        return render(request,'main/meeting_form.html',{})
+    return render(request,'main/user1.html',{})
 
 
 
@@ -140,9 +140,9 @@ def customer_client(request):
 
         context={}
 
-        columns= [userID,firstName,middleName,lastName,budget,emailID,phoneNumber,streetName,city,pincode,state,isClient,fax,companyName,gstIN]
+        columns= ['userID','firstName','middleName','lastName','budget','emailID','phoneNumber','streetName','city','pincode','state','isClient','fax','companyName','gstIN']
         getdf(context, columns, data)
-        return render(request, data.html)
+        return render(request, 'data.html')
 
     elif request.POST.get("q3"):
         context = {}
@@ -155,11 +155,11 @@ def customer_client(request):
             cursor.execute("select * from allMyCasesClientCompanies;")
             data = cursor.fetchall()
 
-        columns = [caseID, plaintiff, lastDateOfActivity, flair, dateOfFiling, duration, status, userID]
+        columns = ['caseID', 'plaintiff', 'lastDateOfActivity', 'flair', 'dateOfFiling', 'duration', 'status', 'userID']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
 def customer(request):
     print(request.POST)
@@ -175,9 +175,9 @@ def customer(request):
             data = cursor.fetchall()
         context={}
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,budget,emailID,phoneNumber,streetName,city,pincode,state,isClient]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','budget','emailID','phoneNumber','streetName','city','pincode','state','isClient']
         getdf(context, columns, data)
-        return render(request, data.html)
+        return render(request, 'data.html')
     #query2
     elif request.POST.get("q2"):
         context = {}
@@ -192,11 +192,11 @@ def customer(request):
             cursor.execute(query)
             cursor.execute("select * from myEventsClient;")
             data = cursor.fetchall()
-        columns=[userID,whentt,description]
+        columns=['userID','whentt','description']
 
         obj = getdf(context, columns, data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q3"):
         context = {}
@@ -209,11 +209,11 @@ def customer(request):
             cursor.execute("select * from allMyCasesClient;")
             data = cursor.fetchall()
 
-        columns = [caseID, plaintiff, lastDateOfActivity, flair, dateOfFiling, duration, status, userID]
+        columns = ['caseID', 'plaintiff', 'lastDateOfActivity', 'flair', 'dateOfFiling', 'duration', 'status', 'userID']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q4"):
         context = {}
@@ -226,25 +226,25 @@ def customer(request):
             cursor.execute("select * from myBillsClient;")
             data = cursor.fetchall()
 
-        columns = [transactionID, dateOfPayment, description, amount, caseID, flair, status]
+        columns = ['transactionID', 'dateOfPayment', 'description', 'amount', 'caseID', 'flair', 'status']
 
         obj = getdf(context, columns, data)
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q5"):
-        return render(request,main/form_lawyer.html,{})
+        return render(request,'main/form_lawyer.html',{})
 
     elif request.POST.get("q6"):
-        return render(request,main/meeting_form.html,{})
+        return render(request,'main/meeting_form.html',{})
 
-    return render(request,main/user1.html,{})
+    return render(request,'main/user1.html',{})
 
 def user_search_lawyer_query(request):
-    specialization = request.POST[specialization]
-    clientRating = request.POST[clientRating]
-    experience = request.POST[Experience]
-    avgtime = request.POST[avgTimePerCase]
-    charges = request.POST[charges]
+    specialization = request.POST['specialization']
+    clientRating = request.POST['clientRating']
+    experience = request.POST['Experience']
+    avgtime = request.POST['avgTimePerCase']
+    charges = request.POST['charges']
 
 
     context = {}
@@ -259,11 +259,11 @@ def user_search_lawyer_query(request):
         cursor.execute("select * from BestSuitedLawyer;")
         data = cursor.fetchall()
 
-    columns = [firstName,lastName,userID]
+    columns = ['firstName','lastName','userID']
 
     obj = getdf(context,columns,data)
 
-    return render(request, data.html, {table: obj})
+    return render(request, 'data.html', {'table': obj})
 
 def lawyer(request):
     if request.POST.get("q1"):
@@ -280,11 +280,11 @@ def lawyer(request):
             cursor.execute("select * from LawyerEvents;")
             data = cursor.fetchall()
 
-        columns = [userID,whentt,description]
+        columns = ['userID','whentt','description']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q2"):
         context = {}
@@ -300,11 +300,11 @@ def lawyer(request):
             cursor.execute("select * from LawyerCases;")
             data = cursor.fetchall()
 
-        columns = [caseID, plaintiff, lastDateOfActivity, flair, dateOfFiling, duration, status]
+        columns = ['caseID', 'plaintiff', 'lastDateOfActivity', 'flair', 'dateOfFiling', 'duration', 'status']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q3"):
         context = {}
@@ -318,11 +318,11 @@ def lawyer(request):
             cursor.execute("select * from LawyerDeets;")
             data = cursor.fetchall()
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,gender,charges,casesWon,casesLost,casesSettled,experience,emailID,phoneNumber,positionAtFirm,avgTimePerCase,streetName,city,pincode,state,specialization,clientRating]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','charges','casesWon','casesLost','casesSettled','experience','emailID','phoneNumber','positionAtFirm','avgTimePerCase','streetName','city','pincode','state','specialization','clientRating']
 
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     elif request.POST.get("q4"):
         context = {}
@@ -335,10 +335,10 @@ def lawyer(request):
             cursor.execute("select * from otherlawyers;")
             data = cursor.fetchall()
 
-        columns = [firstname, lastname, emailId, specialization, experience, casesLost, casesSettled, avgTimePerCase, clientRating]
+        columns = ['firstname', 'lastname', 'emailId', 'specialization', 'experience', 'casesLost', 'casesSettled', 'avgTimePerCase', 'clientRating']
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     if request.POST.get("q5"):
         context = {}
@@ -353,10 +353,10 @@ def lawyer(request):
             cursor.execute("select * from visibleDocs;")
             data = cursor.fetchall()
 
-        columns = [docID, createdOn, dateLastModified, type, caseID, lastdateofactivity, flair, status, plaintiff]
+        columns = ['docID', 'createdOn', 'dateLastModified', 'type', 'caseID', 'lastdateofactivity', 'flair', 'status', 'plaintiff']
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     if request.POST.get("q6"):
         context = {}
@@ -376,10 +376,10 @@ def lawyer(request):
             cursor.execute("select * from IndividualsAsClients;")
             data = cursor.fetchall()
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,budget,emailID,phoneNumber,streetName,city,pincode,state,isClient]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','budget','emailID','phoneNumber','streetName','city','pincode','state','isClient']
         obj = getdf(context,columns,data)
 
-        return render(request, data.html, {table: obj})
+        return render(request, 'data.html', {'table': obj})
 
     if request.POST.get("q7"):
         context = {}
@@ -392,12 +392,12 @@ def lawyer(request):
             query=query.format(readfile())
             cursor.execute(query)
             # cursor.execute("select * from BestSuitedLawyer;")
-        return HttpResponseRedirect(login)
+        return HttpResponseRedirect('login')
 
     elif request.POST.get("q8"):
-        return render(request,main/meeting_form.html,{})
+        return render(request,'main/meeting_form.html',{})
 
-    return render(request,main/user1.html,{})
+    return render(request,'main/user1.html',{})
 
 
 def otherstaff(request):
@@ -415,9 +415,9 @@ def otherstaff(request):
 
         context={}
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,gender,salary,experience,emailID,phoneNumber,positionAtFirm,streetName,city,pincode,state]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','salary','experience','emailID','phoneNumber','positionAtFirm','streetName','city','pincode','state']
         getdf(context, columns, data)
-        return render(request, data.html)
+        return render(request, 'data.html')
         
     elif request.POST.get("q2"):
         with connection.cursor() as cursor:
@@ -431,10 +431,10 @@ def otherstaff(request):
             data = cursor.fetchall()
         context={}
 
-        columns = [userID,whentt,description]
+        columns = ['userID','whentt','description']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
     elif request.POST.get("q3"):
         with connection.cursor() as cursor:
@@ -447,13 +447,13 @@ def otherstaff(request):
 
         context={}
 
-        columns = [transactionID,dateOfPayment,description,amount,type]
+        columns = ['transactionID','dateOfPayment','description','amount','type']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
     elif request.POST.get("q5"):
-        return render(request,main/meeting_form.html,{})
+        return render(request,'main/meeting_form.html',{})
 
 
 def managing_partner(request):
@@ -469,10 +469,10 @@ def managing_partner(request):
 
         context={}
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,gender,salary,experience,emailID,phoneNumber,positionAtFirm,streetName,city,pincode,state]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','salary','experience','emailID','phoneNumber','positionAtFirm','streetName','city','pincode','state']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
 
     elif request.POST.get("q2"):
@@ -487,10 +487,10 @@ def managing_partner(request):
 
         context={}
 
-        columns = [userID,whentt,description]
+        columns = ['userID','whentt','description']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
 
     elif request.POST.get("q3"):
@@ -504,10 +504,10 @@ def managing_partner(request):
 
         context={}
 
-        columns = [transactionID,dateOfPayment,description,amount,type]
+        columns = ['transactionID','dateOfPayment','description','amount','type']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
 
     elif request.POST.get("q4"):
@@ -523,10 +523,10 @@ def managing_partner(request):
 
         context={}
 
-        columns = [userID,firstName,middleName,lastName,dateOfBirth,gender,charges,casesWon,casesLost,casesSettled,experience,emailID,phoneNumber,positionAtFirm,avgTimePerCase,streetName,city,pincode,state,specialization,clientRating]
+        columns = ['userID','firstName','middleName','lastName','dateOfBirth','gender','charges','casesWon','casesLost','casesSettled','experience','emailID','phoneNumber','positionAtFirm','avgTimePerCase','streetName','city','pincode','state','specialization','clientRating']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
 
     elif request.POST.get("q5"):
@@ -543,18 +543,18 @@ def managing_partner(request):
 
         context={}
 
-        columns = [userID,firstName,lastName]
+        columns = ['userID','firstName','lastName']
         getdf(context, columns, data)
 
-        return render(request, data.html)
+        return render(request, 'data.html')
 
     elif request.POST.get("q6"):
-        return render(request,main/meeting_form.html,{})
+        return render(request,'main/meeting_form.html',{})
 
 
 def meeting_form(request):
-    time=request.POST[time]
-    description = request.POST[description]
+    time=request.POST['time']
+    description = request.POST['description']
     print(time)
     print(description)
     context = {}
@@ -569,9 +569,9 @@ def meeting_form(request):
         cursor.execute(query)
 
         query = """
-            insert into myEventsManagement values("{}", {},"{}");
+            insert into myEventsManagement values("{}", '{}',"{}");
         """            
         query = query.format(readfile(),time,description)
         cursor.execute(query)
 
-    return redirect(login)
+    return redirect('login')

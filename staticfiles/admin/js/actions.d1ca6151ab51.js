@@ -150,7 +150,7 @@
         }
     };
 
-    // Call function fn when the DOM is loaded and ready. If it is already
+    // Call function fn whentt the DOM is loaded and ready. If it is already
     // loaded, call the function now.
     // http://youmightnotneedjquery.com/#ready
     function ready(fn) {

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="{% static css/new.css %}">
+      <link rel="stylesheet" href="{% static 'css/new.css' %}">
 
   <style>
         .wrapper {
@@ -27,35 +27,35 @@
 
 <body>
     <div class="wrapper">
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:260px;" type="submit" value="1" name="q1" class="btn"><span>View events (such as current court hearings related to ongoing cases).</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:280px;" type="submit" value="1" name="q2" class="btn"><span>View case details of all their cases.</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:300px;" type="submit" value="1" name="q3" class="btn"><span>View their personal details (financial history, track record).</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:320px;" type="submit" value="1" name="q4" class="btn"><span>View basic details of peers (not salary).</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:340px;" type="submit" value="1" name="q5" class="btn"><span>View allowed documents related to any case of the law firm.</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:360px;" type="submit" value="1" name="q6" class="btn"><span>View data of all the Individual clients.</span></button>
         </form>
-         <form method="POST" action = "{% url lawyer %}">
+         <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:380px;" type="submit" value="1" name="q7" class="btn"><span>Update Cases Won</span></button>
         </form>
-        <form method="POST" action = "{% url lawyer %}">
+        <form method="POST" action = "{% url 'lawyer' %}">
         {% csrf_token %}
             <button style = "position:relative; left:10px; top:400px;" type="submit" value="1" name="q8" class="btn"><span>Add Meeting</span></button>
         </form>

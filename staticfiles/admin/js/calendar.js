@@ -162,7 +162,7 @@ depends on core.js for utility functions like removeChildren or quickElement
         // div_id (string) is the ID of the element in which the calendar will
         //     be displayed
         // callback (string) is the name of a JavaScript function that will be
-        //     called with the parameters (year, month, day) when a day in the
+        //     called with the parameters (year, month, day) whentt a day in the
         //     calendar is clicked
         this.div_id = div_id;
         this.callback = callback;
