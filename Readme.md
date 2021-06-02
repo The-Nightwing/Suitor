@@ -1,18 +1,18 @@
 <p align="center"><img width="460" height="600" src="images/suitor.jpg"></p>
 
-## **LAW FIRM DATABASE MANAGEMENT**
+## 1. **LAW FIRM DATABASE MANAGEMENT**
 
-## **Group 57**
+## 2. **Group 57**
 
-## →**Aditi Sejal (2019228)**
+## 3. →**Aditi Sejal (2019228)**
 
-## → **Neha Goel (2019066)**
+## 4. → **Neha Goel (2019066)**
 
-## → **Shivam Verma (2019272)**
+## 5. → **Shivam Verma (2019272)**
 
-## → **Kushagra Gupta (2019056)**
+## 6. → **Kushagra Gupta (2019056)**
 
-## → **Karish Grover (2019471)**
+## 7. → **Karish Grover (2019471)**
 
 ## 8. **Focus on discussing and coming up with a unique and creative idea for the Project**
 
