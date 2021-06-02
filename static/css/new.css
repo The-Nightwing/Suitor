@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 body {
 	margin: 0;
@@ -17,7 +17,7 @@ body {
 }
 
 .description, .link {
-  font-family: 'Amatic SC', cursive;
+  font-family: Amatic SC, cursive;
   text-align: center;
 }
 

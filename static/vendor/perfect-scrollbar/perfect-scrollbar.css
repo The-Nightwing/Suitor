@@ -18,9 +18,9 @@
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
   height: 15px;
-  /* there must be 'bottom' or 'top' for ps__rail-x */
+  /* there must be bottom or top for ps__rail-x */
   bottom: 0px;
-  /* please don't change 'position' */
+  /* please dont change position */
   position: absolute;
 }
 
@@ -30,9 +30,9 @@
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
   width: 15px;
-  /* there must be 'right' or 'left' for ps__rail-y */
+  /* there must be right or left for ps__rail-y */
   right: 0;
-  /* please don't change 'position' */
+  /* please dont change position */
   position: absolute;
 }
 
@@ -68,9 +68,9 @@
   transition: background-color .2s linear, height .2s ease-in-out;
   -webkit-transition: background-color .2s linear, height .2s ease-in-out;
   height: 6px;
-  /* there must be 'bottom' for ps__thumb-x */
+  /* there must be bottom for ps__thumb-x */
   bottom: 2px;
-  /* please don't change 'position' */
+  /* please dont change position */
   position: absolute;
 }
 
@@ -80,9 +80,9 @@
   transition: background-color .2s linear, width .2s ease-in-out;
   -webkit-transition: background-color .2s linear, width .2s ease-in-out;
   width: 6px;
-  /* there must be 'right' for ps__thumb-y */
+  /* there must be right for ps__thumb-y */
   right: 2px;
-  /* please don't change 'position' */
+  /* please dont change position */
   position: absolute;
 }
 

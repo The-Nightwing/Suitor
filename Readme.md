@@ -196,9 +196,9 @@ The application manages data of various aspects of the firm, like details of law
 
 | **Variable** | **Datatype** | **Integrity Constraints** |
 | --- | --- | --- |
-| userID | char(10) | Not null, Foreign key, part of Primary key along with caseID, when |
-| caseID | char(15) | Not null, Foreign key, part of Primary key along with userID, when |
-| when | datetime | Not null, Foreign key, part of Primary key along with userID, caseID |
+| userID | char(10) | Not null, Foreign key, part of Primary key along with caseID, whentt |
+| caseID | char(15) | Not null, Foreign key, part of Primary key along with userID, whentt |
+| whentt | datetime | Not null, Foreign key, part of Primary key along with userID, caseID |
 
 **IndividualClients**
 
@@ -319,7 +319,7 @@ The application manages data of various aspects of the firm, like details of law
 | **Variable** | **Datatype** | **Integrity Constraints** |
 | --- | --- | --- |
 | userID | char(10) | Primary Key |
-| when | datetime | Not null, part of Primary Key along with calendarID |
+| whentt | datetime | Not null, part of Primary Key along with calendarID |
 | name | varchar(256) | Not null |
 | description | varchar(256) | Not null |
 
@@ -437,7 +437,7 @@ Following are the search key attributes for index tables of different tables bas
 | LegalDocuments | docID, caseID, visibility |
 | Lawyers | userID, specialization, city, lastName, charges,experience, clientRating,  avgTimePerCase |
 | Opposition | OppositionID |
-| Calendar | userID, when |
+| Calendar | userID, whentt |
 | Other staff | userID|
 | Managing partners | userID |
 | Against | caseID, oppositionID |
@@ -445,7 +445,7 @@ Following are the search key attributes for index tables of different tables bas
 | Clients | userID |
 | CourtHearing | caseID, time |
 | FinancialTransactions | transactionID |
-| DisplayedIn | caseID, when, userID |
+| DisplayedIn | caseID, whentt, userID |
 | Handles | userID, caseID |
 | HasA | userID, caseID |
 | Invest | transactionID, userID |
@@ -519,7 +519,7 @@ Following are the search key attributes for index tables of different tables bas
 **Sign in Page**
 ![](images/3.jpg)
 
-**One of the Stakeholder's Query Page**
+**One of the Stakeholders Query Page**
 ![](images/4.jpg)
 
 **Ouput format of Queries**

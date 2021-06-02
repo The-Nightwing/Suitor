@@ -101,24 +101,24 @@ def getdf(context, columns, data):
     BASE_DIR = Path(__file__).resolve().parent.parent
 
     df = pd.DataFrame.from_dict(context)
-    df.to_csv(os.path.join(BASE_DIR,'use.csv'),index=False)
+    df.to_csv(os.path.join(BASE_DIR,use.csv),index=False)
 
-    df = pd.read_csv(os.path.join(BASE_DIR,'use.csv'))
+    df = pd.read_csv(os.path.join(BASE_DIR,use.csv))
     
     obj = df.to_html(os.path.join(BASE_DIR,"templates/data.html"))
     df.to_html(os.path.join(BASE_DIR,"templates/data.html"))
     with open(os.path.join(BASE_DIR,"templates/data.html")) as file:
         file = file.read()
-    file = file.replace("<table ", "<table class='rwd-table'")
+    file = file.replace("<table ", "<table class=rwd-table")
     with open(os.path.join(BASE_DIR,"templates/data.html"), "w") as file_to_write:
         file_to_write.write(html + file)
 
 def writeinfile(string):
-  with open('user.txt','w') as writer:
+  with open(user.txt,w) as writer:
     writer.write(string)
 
 def readfile():
-  with open('user.txt','r') as reader:
+  with open(user.txt,r) as reader:
     user = reader.read()
   return user 
 

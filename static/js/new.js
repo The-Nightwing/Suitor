@@ -46,7 +46,7 @@ $(function() {
 		relMouseX = (mouseX - $canvas.offset().left);
 		relMouseY = (mouseY - $canvas.offset().top);
 	}
-	$(document).on('mousemove', mouseDirection);
+	$(document).on(mousemove, mouseDirection);
 
 	/**
 	 * Get mouse speed
@@ -67,18 +67,18 @@ $(function() {
 	 */
 	function initButton() {
 		// Get button
-		var button = $('.btn-liquid');
+		var button = $(.btn-liquid);
 		var buttonWidth = button.width();
 		var buttonHeight = button.height();
 
 		// Create canvas
-		$canvas = $('<canvas></canvas>');
+		$canvas = $(<canvas></canvas>);
 		button.append($canvas);
 
 		canvas = $canvas.get(0);
 		canvas.width = buttonWidth+100;
 		canvas.height = buttonHeight+100;
-		context = canvas.getContext('2d');
+		context = canvas.getContext(2d);
 
 		// Add points
 
@@ -166,7 +166,7 @@ $(function() {
 
 		// Clear scene
 		context.clearRect(0, 0, $canvas.width(), $canvas.height());
-		context.fillStyle = '#fff';
+		context.fillStyle = #fff;
 		context.fillRect(0, 0, $canvas.width(), $canvas.height());
 
 		// Move points
@@ -181,8 +181,8 @@ $(function() {
 		var distance = Math.sqrt(Math.pow(gradientX - $canvas.width()/2, 2) + Math.pow(gradientY - $canvas.height()/2, 2)) / Math.sqrt(Math.pow($canvas.width()/2, 2) + Math.pow($canvas.height()/2, 2));
 
 		var gradient = context.createRadialGradient(gradientX, gradientY, 300+(300*distance), gradientX, gradientY, 0);
-		gradient.addColorStop(0, '#102ce5');
-		gradient.addColorStop(1, '#E406D6');
+		gradient.addColorStop(0, #102ce5);
+		gradient.addColorStop(1, #E406D6);
 
 		// Draw shapes
 		var groups = [pointsA, pointsB]
@@ -192,7 +192,7 @@ $(function() {
 
 			if (j == 0) {
 				// Background style
-				context.fillStyle = '#1CE2D8';
+				context.fillStyle = #1CE2D8;
 			} else {
 				// Foreground style
 				context.fillStyle = gradient;
@@ -254,7 +254,7 @@ nextP = points[0];
 
 		if (showIndicators) {
 			// Draw points
-			context.fillStyle = '#000';
+			context.fillStyle = #000;
 			context.beginPath();
 			for (var i = 0; i < pointsA.length; i++) {
 				var p = pointsA[i];
@@ -264,7 +264,7 @@ nextP = points[0];
 			context.fill();
 
 			// Draw controls
-			context.fillStyle = '#f00';
+			context.fillStyle = #f00;
 			context.beginPath();
 			for (var i = 0; i < pointsA.length; i++) {
 				var p = pointsA[i];

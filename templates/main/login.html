@@ -10,7 +10,7 @@
   <style>
   body {
         background-color: black;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: Ubuntu, sans-serif;
     }
     
     .main {
@@ -26,14 +26,14 @@
     .sign {
         padding-top: 40px;
         color: black;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: Ubuntu, sans-serif;
         font-weight: bold;
         font-size: 23px;
     }
      .sign1 {
         padding-top: 30px;
         color: black;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: Ubuntu, sans-serif;
         font-weight: bold;
         font-size: 23px;
     }
@@ -55,7 +55,7 @@
     margin-left: 46px;
     text-align: center;
     margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Ubuntu, sans-serif;
     }
     
     form.form1 {
@@ -79,7 +79,7 @@
     margin-left: 46px;
     text-align: center;
     margin-bottom: 29px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Ubuntu, sans-serif;
     }
     
    
@@ -99,7 +99,7 @@
         padding-right: 40px;
         padding-bottom: 15px;
         padding-top: 15px;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: Ubuntu, sans-serif;
         margin-left: 35%;
         font-size: 13px;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
@@ -128,7 +128,7 @@
   <div class="main">
   <p class="sign" align="center">Welcome to Suitor</p>
   <p class="sign1" align="center">Sign In</p>
-    <form class="form1" method="POST" action="{% url 'loginrequest'%}">
+    <form class="form1" method="POST" action="{% url loginrequest%}">
     {% csrf_token %}
       <input class="un " type="text" align="center" name="username" placeholder="Username">
    
