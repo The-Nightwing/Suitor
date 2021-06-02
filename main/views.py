@@ -83,7 +83,7 @@ def paralegal(request):
             cursor.execute(query)
             cursor.execute("select * from myEvents;")
             data = cursor.fetchall()
-        columns=['userID','when','description']
+        columns=['userID','whentt','description']
 
         obj = getdf(context, columns, data)
 
@@ -192,7 +192,7 @@ def customer(request):
             cursor.execute(query)
             cursor.execute("select * from myEventsClient;")
             data = cursor.fetchall()
-        columns=['userID','when','description']
+        columns=['userID','whentt','description']
 
         obj = getdf(context, columns, data)
 
@@ -280,7 +280,7 @@ def lawyer(request):
             cursor.execute("select * from LawyerEvents;")
             data = cursor.fetchall()
 
-        columns = ['userID','when','description']
+        columns = ['userID','whentt','description']
 
         obj = getdf(context,columns,data)
 
@@ -431,7 +431,7 @@ def otherstaff(request):
             data = cursor.fetchall()
         context={}
 
-        columns = ['userID','when','description']
+        columns = ['userID','whentt','description']
         getdf(context, columns, data)
 
         return render(request, 'data.html')
@@ -487,7 +487,7 @@ def managing_partner(request):
 
         context={}
 
-        columns = ['userID','when','description']
+        columns = ['userID','whentt','description']
         getdf(context, columns, data)
 
         return render(request, 'data.html')
