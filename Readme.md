@@ -1,18 +1,18 @@
 <p align="center"><img width="460" height="600" src="images/suitor.jpg"></p>
 
-## 1. **LAW FIRM DATABASE MANAGEMENT**
+## **LAW FIRM DATABASE MANAGEMENT**
 
-## 2. **Group 57**
+## **Group 57**
 
-## 3. →**Aditi Sejal (2019228)**
+## →**Aditi Sejal (2019228)**
 
-## 4. → **Neha Goel (2019066)**
+## → **Neha Goel (2019066)**
 
-## 5. → **Shivam Verma (2019272)**
+## → **Shivam Verma (2019272)**
 
-## 6. → **Kushagra Gupta (2019056)**
+## → **Kushagra Gupta (2019056)**
 
-## 7. → **Karish Grover (2019471)**
+## → **Karish Grover (2019471)**
 
 ## 8. **Focus on discussing and coming up with a unique and creative idea for the Project**
 
@@ -176,7 +176,6 @@ The application manages data of various aspects of the firm, like details of law
 | budget | mediumint | Not null |
 | companyName | varchar(256) | Not null |
 | gstIN | varchar(11) |
- |
 | calendarID | char(10) | Foreign Key referenced by Calendar |
 
 **CourtHearing**
