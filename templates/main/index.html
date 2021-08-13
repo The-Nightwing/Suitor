@@ -18,23 +18,21 @@
     ================================================== -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
-
-    <!-- script
-    ================================================== -->
+    <link rel="manifest" href = "{% static 'js/site.webmanifest' %}">
+    
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script defer src="{% static 'js/fontawesome/all.min.js' %}"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'js/site.webmanifest' %}">
 
 </head>
 
 <body id="top">
-
 
     <!-- preloader
     ================================================== -->
@@ -68,7 +66,7 @@
                 </ul>
             </nav> <!-- end s-header__nav-wrap -->
 
-            <a href="{% url 'login' %}" class="btn btn--primary btn--small">
+            <a href="Login/index.html" class="btn btn--primary btn--small">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
                 Sign In
             </a>
@@ -287,7 +285,7 @@
                         <div class="testimonial-slider__author">
                             <img src="{% static 'images/avatars/user-02.jpg' %}" alt="Author image" class="testimonial-slider__avatar">
                             <cite class="testimonial-slider__cite">
-                                <strong>Issue of unstamped arbitration still in question</strong>
+                                <strong>Issue of unstamped arbitration agreements still in question</strong>
                                 <span>Mar, 2021</span>
                             </cite>
                         </div>

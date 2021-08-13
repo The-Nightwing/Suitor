@@ -9,7 +9,7 @@
     
     const cfg = {
                 scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : ''   // mailchimp url
+                mailChimpURL   :    // mailchimp url
                 };
     const $WIN = $(window);
 
@@ -17,19 +17,19 @@
     // Add the User Agent to the <html>
     // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
     // const doc = document.documentElement;
-    // doc.setAttribute('data-useragent', navigator.userAgent);
+    // doc.setAttribute(data-useragent, navigator.userAgent);
 
 
    /* preloader
     * -------------------------------------------------- */
     const ssPreloader = function() {
 
-        $("html").addClass('ss-preload');
+        $("html").addClass(ss-preload);
 
-        $WIN.on('load', function() {
+        $WIN.on(load, function() {
 
             // force page scroll position to top at page refresh
-            $('html, body').animate({ scrollTop: 0 }, 'normal');
+            $(html, body).animate({ scrollTop: 0 }, normal);
 
             // will first fade out the loading animation 
             $("#loader").fadeOut("slow", function() {
@@ -38,8 +38,8 @@
             }); 
             
             // for hero content animations 
-            $("html").removeClass('ss-preload');
-            $("html").addClass('ss-loaded');
+            $("html").removeClass(ss-preload);
+            $("html").addClass(ss-loaded);
 
         });
     };
@@ -49,7 +49,7 @@
    /* pretty print
     * -------------------------------------------------- */
     const ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
+        $(pre).addClass(prettyprint);
         $( document ).ready(function() {
             prettyPrint();
         });
@@ -61,31 +61,31 @@
     * -------------------------------------------------- */
     const ssMoveHeader = function () {
 
-        const $hero = $('.s-hero'),
-              $hdr = $('.s-header'),
+        const $hero = $(.s-hero),
+              $hdr = $(.s-header),
               triggerHeight = $hero.outerHeight() - 170;
 
 
-        $WIN.on('scroll', function () {
+        $WIN.on(scroll, function () {
 
             let loc = $WIN.scrollTop();
 
             if (loc > triggerHeight) {
-                $hdr.addClass('sticky');
+                $hdr.addClass(sticky);
             } else {
-                $hdr.removeClass('sticky');
+                $hdr.removeClass(sticky);
             }
 
             if (loc > triggerHeight + 20) {
-                $hdr.addClass('offset');
+                $hdr.addClass(offset);
             } else {
-                $hdr.removeClass('offset');
+                $hdr.removeClass(offset);
             }
 
             if (loc > triggerHeight + 150) {
-                $hdr.addClass('scrolling');
+                $hdr.addClass(scrolling);
             } else {
-                $hdr.removeClass('scrolling');
+                $hdr.removeClass(scrolling);
             }
 
         });
@@ -98,29 +98,29 @@
     * ---------------------------------------------------- */ 
     const ssMobileMenu = function() {
 
-        const $toggleButton = $('.s-header__menu-toggle');
-        const $headerContent = $('.s-header__content');
+        const $toggleButton = $(.s-header__menu-toggle);
+        const $headerContent = $(.s-header__content);
         const $siteBody = $("body");
 
-        $toggleButton.on('click', function(event){
+        $toggleButton.on(click, function(event){
             event.preventDefault();
-            $toggleButton.toggleClass('is-clicked');
-            $siteBody.toggleClass('menu-is-open');
+            $toggleButton.toggleClass(is-clicked);
+            $siteBody.toggleClass(menu-is-open);
         });
 
-        $headerContent.find('.s-header__nav a, .btn').on("click", function() {
+        $headerContent.find(.s-header__nav a, .btn).on("click", function() {
 
             // at 900px and below
-            if (window.matchMedia('(max-width: 900px)').matches) {
-                $toggleButton.toggleClass('is-clicked');
-                $siteBody.toggleClass('menu-is-open');
+            if (window.matchMedia((max-width: 900px)).matches) {
+                $toggleButton.toggleClass(is-clicked);
+                $siteBody.toggleClass(menu-is-open);
             }
         });
 
-        $WIN.on('resize', function() {
+        $WIN.on(resize, function() {
 
             // above 900px
-            if (window.matchMedia('(min-width: 901px)').matches) {
+            if (window.matchMedia((min-width: 901px)).matches) {
                 if ($siteBody.hasClass("menu-is-open")) $siteBody.removeClass("menu-is-open");
                 if ($toggleButton.hasClass("is-clicked")) $toggleButton.removeClass("is-clicked");
             }
@@ -134,20 +134,20 @@
     * ----------------------------------------------------- */
     const ssPhotoswipe = function() {
         const items = [],
-              $pswp = $('.pswp')[0],
-              $folioItems = $('.folio-item');
+              $pswp = $(.pswp)[0],
+              $folioItems = $(.folio-item);
 
         // get items
         $folioItems.each( function(i) {
 
             let $folio = $(this),
-                $thumbLink =  $folio.find('.folio-item__thumb-link'),
-                $title = $folio.find('.folio-item__title'),
-                $caption = $folio.find('.folio-item__caption'),
-                $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
+                $thumbLink =  $folio.find(.folio-item__thumb-link),
+                $title = $folio.find(.folio-item__title),
+                $caption = $folio.find(.folio-item__caption),
+                $titleText = <h4> + $.trim($title.html()) + </h4>,
                 $captionText = $.trim($caption.html()),
-                $href = $thumbLink.attr('href'),
-                $size = $thumbLink.data('size').split('x'),
+                $href = $thumbLink.attr(href),
+                $size = $thumbLink.data(size).split(x),
                 $width  = $size[0],
                 $height = $size[1];
         
@@ -167,7 +167,7 @@
         // bind click event
         $folioItems.each(function(i) {
 
-            $(this).find('.folio-item__thumb-link').on('click', function(e) {
+            $(this).find(.folio-item__thumb-link).on(click, function(e) {
                 e.preventDefault();
                 let options = {
                     index: i,
@@ -188,7 +188,7 @@
     * ------------------------------------------------------ */
     const ssSlickSlider = function() {
 
-        $('.clients').slick({
+        $(.clients).slick({
             arrows: false,
             dots: true,
             infinite: true,
@@ -221,7 +221,7 @@
             ]
         });
 
-        $('.testimonial-slider').slick({
+        $(.testimonial-slider).slick({
             arrows: true,
             dots: false,
             infinite: true,
@@ -250,10 +250,10 @@
         AOS.init( {
             offset: 100,
             duration: 600,
-            easing: 'ease-in-out',
+            easing: ease-in-out,
             delay: 300,
             once: true,
-            disable: 'mobile'
+            disable: mobile
         });
 
     };
@@ -264,7 +264,7 @@
     * ------------------------------------------------------ */
     const ssAlertBoxes = function() {
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
+        $(.alert-box).on(click, .alert-box__close, function() {
             $(this).parent().fadeOut(500);
         }); 
 
@@ -275,16 +275,16 @@
     * ------------------------------------------------------ */
     const ssSmoothScroll = function() {
         
-        $('.smoothscroll').on('click', function (e) {
+        $(.smoothscroll).on(click, function (e) {
             const target = this.hash;
             const $target = $(target);
             
             e.preventDefault();
             e.stopPropagation();
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
+            $(html, body).stop().animate({
+                scrollTop: $target.offset().top
+            }, cfg.scrollDuration, swing).promise().done(function () {
                 window.location.hash = target;
             });
         });
@@ -300,13 +300,13 @@
         const $goTopButton = $(".ss-go-top")
 
         // Show or hide the button
-        if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
+        if ($(window).scrollTop() >= pxShow) $goTopButton.addClass(link-is-visible);
 
-        $(window).on('scroll', function() {
+        $(window).on(scroll, function() {
             if ($(window).scrollTop() >= pxShow) {
-                if(!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
+                if(!$goTopButton.hasClass(link-is-visible)) $goTopButton.addClass(link-is-visible)
             } else {
-                $goTopButton.removeClass('link-is-visible')
+                $goTopButton.removeClass(link-is-visible)
             }
         });
     };
