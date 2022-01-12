@@ -8,7 +8,10 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('',views.index, name="index"),
+    path('',views.index, name="index-1"),
+    path('services', views.services, name='services'),
+    path('contact-us', views.contact_us, name='contact-us'),
+    path('about-us', views.about_us, name='about-us'),
     path('login',views.login,name='login'),
     path('loginrequest',views.loginaccess,name='loginrequest'),
     path('paralegal',views.paralegal, name='paralegal'),

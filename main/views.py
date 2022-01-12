@@ -10,11 +10,20 @@ from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 
 def index(request):
-    return render(request,'main/index.html',{})
+    return render(request,'main/index-1.html',{})
 
 def login(request):
     return render(request,'main/login.html',{})
 
+def contact_us(request):
+    return render(request, 'main/contact-us.html', {})
+
+def about_us(request):
+    return render(request, 'main/about-us.html', {})
+
+def services(request):
+    return render(request, 'main/services.html', {})
+    
 def loginaccess(request):
    
     if request.POST['username'][0]=='I':

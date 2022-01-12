@@ -15,6 +15,7 @@ import os
 import pymysql
 import django_heroku
 from decouple import config
+
 pymysql.install_as_MySQLdb()
 
 
