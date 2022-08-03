@@ -25,7 +25,7 @@ def services(request):
     return render(request, 'main/services.html', {})
     
 def loginaccess(request):
-   
+    print(request.POST)
     if request.POST['username'][0]=='I':
         writeinfile(request.POST['username'].strip())
         if user_data[request.POST['username'].strip()]==request.POST['password'].strip():
