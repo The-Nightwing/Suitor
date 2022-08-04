@@ -37,7 +37,6 @@ else:
     SECRET_KEY = os.getenv('SECRET_KEY')
 
 ALLOWED_HOSTS = [
-    'suitor.cleverapps.io',
     'suitor-webapp.herokuapp.com/',
     '127.0.0.1'
 ]
