@@ -38,8 +38,6 @@ else:
 
 ALLOWED_HOSTS = [
     'suitor-webapp.herokuapp.com/',
-    '.vercel.app',
-    '.now.sh',
     '127.0.0.1'
 ]
 
