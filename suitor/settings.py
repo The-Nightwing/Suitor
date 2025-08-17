@@ -33,11 +33,12 @@ DEBUG = True
 if DEBUG:
     SECRET_KEY = config('SECRET_KEY')
 else:
-    SECRET_KEY = os.getenv('SECRET_KEY')
+    SECRET_KEY = config('SECRET_KEY')
 
 ALLOWED_HOSTS = [
     'suitor-webapp.herokuapp.com/',
-    '127.0.0.1'
+    '127.0.0.1',
+    'web-production-53e01.up.railway.app',
 ]
 
 INSTALLED_APPS = [
@@ -101,11 +102,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.getenv('DBNAME'),
-            'USER': os.getenv('DBUSER'),
-            'PASSWORD': os.getenv('DBPASSWORD'),
-            'HOST': os.getenv('DBHOST'),
-            'PORT': os.getenv('DBPORT', '3306'),
+            'NAME': config('DBNAME'),
+            'USER': config('DBUSER'),
+            'PASSWORD': config('DBPASSWORD'),
+            'HOST': config('DBHOST'),
+            'PORT': config('DBPORT', '3306'),
         }
     }
 
