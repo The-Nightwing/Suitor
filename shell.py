@@ -7,10 +7,10 @@ user = input("Enter Username: ")
 password = input("Enter Password: ")
 
 mydb = mysql.connector.connect(
-    host="suitor.czjiaq8hoddl.us-east-2.rds.amazonaws.com",
-    user=user,
-    password=password,
-    database='suitor'
+        host="mysql://root:YCrwzdMgcemgEMhUsQrxQXHuGIQKPjoC@centerbeam.proxy.rlwy.net:47877/railway",
+        user='root',
+        password='YCrwzdMgcemgEMhUsQrxQXHuGIQKPjoC',
+        database='railway'
     )
 
 while True:

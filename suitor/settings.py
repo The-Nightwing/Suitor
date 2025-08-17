@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import pymysql
-import django_heroku
 from decouple import config
 
 pymysql.install_as_MySQLdb()
@@ -89,15 +88,15 @@ WSGI_APPLICATION = 'suitor.wsgi.application'
 
 if DEBUG:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DBNAME'),
-        'USER': config('DBUSER'),
-        'PASSWORD': config('DBPASSWORD'),
-        'HOST': config('DBHOST'),
-        'PORT': '3306',
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': config('DBNAME'),
+            'USER': config('DBUSER'),
+            'PASSWORD': config('DBPASSWORD'),
+            'HOST': config('DBHOST'),
+            'PORT': config('DBPORT', default='3306'),
+        }
     }
-}
 else:
     DATABASES = {
         'default': {
@@ -106,7 +105,7 @@ else:
             'USER': os.getenv('DBUSER'),
             'PASSWORD': os.getenv('DBPASSWORD'),
             'HOST': os.getenv('DBHOST'),
-            'PORT': '3306',
+            'PORT': os.getenv('DBPORT', '3306'),
         }
     }
 
@@ -156,5 +155,4 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
+# del DATABASES['default']['OPTIONS']['sslmode']
